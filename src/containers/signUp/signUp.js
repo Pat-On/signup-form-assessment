@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SignUpForm from "../../components/signUpForm/signUpForm";
+import ConfirmationFormPage from "./../../components/confirmationFormPage/confirmationFormPage";
 
 const SignUp = () => {
   const [pageControl, setPageControl] = useState(0);
@@ -80,13 +81,7 @@ const SignUp = () => {
     case 2:
       //here should be req
       //TODO: confirmation page
-      form = (
-        <SignUpForm
-          form={formElementKeyArray}
-          back={backFunction}
-          next={nextFunction}
-        />
-      );
+      form = <ConfirmationFormPage back={backFunction} next={nextFunction} />;
       break;
     case 3:
       //TODO: completion page
