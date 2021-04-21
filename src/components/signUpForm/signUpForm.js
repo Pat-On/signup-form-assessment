@@ -1,6 +1,6 @@
 import React from "react";
-import Input from "../input/input";
-import Button from "../button/button";
+import Input from "../UI/input/input";
+import Button from "../UI/button/button";
 
 const signUpForm = (props) => {
   return (

@@ -60,6 +60,7 @@ const SignUp = () => {
     case 0:
       form = (
         <SignUpForm
+          readonly={false}
           form={formElementKeyArray.slice(0, 2)}
           formInputHandler={inputChangeHandler}
           next={nextFunction}
