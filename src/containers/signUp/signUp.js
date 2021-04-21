@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+
 import SignUpForm from "../../components/signUpForm/signUpForm";
 import ConfirmationFormPage from "./../../components/confirmationFormPage/confirmationFormPage";
+import CompletionFormScreen from "./../../components/completionFormScreen/completionFormScreen";
 
 const SignUp = () => {
   const [pageControl, setPageControl] = useState(0);
@@ -85,7 +87,7 @@ const SignUp = () => {
       break;
     case 3:
       //TODO: completion page
-      form = <h1>Success</h1>;
+      form = <CompletionFormScreen back={backFunction} next={nextFunction} />;
       break;
     default:
       console.log("You should never see that");
