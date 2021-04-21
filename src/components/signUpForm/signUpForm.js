@@ -6,8 +6,15 @@ const signUpForm = (props) => {
   return (
     <div>
       <h1>Sign-up Form</h1>
-      {props.form.map((item, index) => {
-        return <Input key={index} string={item.id} />;
+      {props.form.map((item) => {
+        return (
+          <Input
+            key={item.id}
+            value={item.config.value}
+            placeholder={item.config.placeholder}
+            formInputHandler={(e) => props.formInputHandler(e, item.id)}
+          />
+        );
       })}
       {props.back && <Button clicked={props.back}> back </Button>}
       {props.next && <Button clicked={props.next}> next </Button>}
