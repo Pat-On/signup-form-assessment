@@ -32,18 +32,16 @@ const SignUp = (props) => {
 
   const formElementKeyArray = [];
   for (let key in signForm) {
-    console.log("run");
-    console.log(pageControl);
     formElementKeyArray.push({
       id: key,
     });
   }
 
-  const chosenTwoFormElements = formElementKeyArray.slice(
-    pageControl,
-    pageControl + 2
-  );
-  console.log(chosenTwoFormElements);
+  // const chosenTwoFormElements = formElementKeyArray.slice(
+  //   pageControl,
+  //   pageControl + 2
+  // );
+  // console.log(chosenTwoFormElements);
 
   let form = "";
   switch (pageControl) {
@@ -66,6 +64,8 @@ const SignUp = (props) => {
       break;
     case 2:
       console.log(formElementKeyArray);
+      //here should be req
+      //TODO: confirmation page
       form = (
         <SignUpForm
           form={formElementKeyArray}
@@ -75,6 +75,7 @@ const SignUp = (props) => {
       );
       break;
     case 3:
+      //TODO: completion page
       form = <h1>Success</h1>;
       break;
   }
