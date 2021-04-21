@@ -8,8 +8,7 @@ const button = (props) => {
       className={classes.Button}
       onClick={props.clicked}
     >
-      {/* {props.children} */}
-      Button
+      {props.children}
     </button>
   );
 };
