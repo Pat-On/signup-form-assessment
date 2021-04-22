@@ -9,10 +9,7 @@ import { checkValidity } from "./../../utility/utility";
 const SignUp = () => {
   const [pageControl, setPageControl] = useState(0);
 
-  // !TODO think over how to control name + p. num / email + DOB / confirmation / completion screen
   const [signForm, setSignForm] = useState({
-    // !TODO Think over validation requirements - name / phone number / email / DOB 18++
-    // !TODO form of the "data"
     name: {
       placeholder: "Name",
       value: "Patryk", // FAKE DATA FOR DEV
@@ -76,12 +73,12 @@ const SignUp = () => {
     });
   };
 
-  //TODO return to 1st page or home
   const returnToMain = () => {
     setPageControl(0);
     //TODO Clear values in state
   };
 
+  //TODO - finish it:
   //confirmation function faking sending data
   const confirmation = () => {
     setPageControl(3);
@@ -108,12 +105,6 @@ const SignUp = () => {
     });
   }
 
-  // const chosenTwoFormElements = formElementKeyArray.slice(
-  //   pageControl,
-  //   pageControl + 2
-  // );
-  // console.log(chosenTwoFormElements);
-
   let form = "";
   switch (pageControl) {
     case 0:
@@ -138,7 +129,6 @@ const SignUp = () => {
       break;
     case 2:
       //here should be req
-      //TODO: confirmation page
       console.log(formElementKeyArray);
       form = (
         <ConfirmationFormPage
@@ -150,7 +140,6 @@ const SignUp = () => {
       );
       break;
     case 3:
-      //TODO: completion page
       form = <CompletionFormScreen back={returnToMain} />;
       break;
     default:

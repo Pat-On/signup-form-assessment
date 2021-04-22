@@ -19,8 +19,8 @@ const signUpForm = (props) => {
           />
         );
       })}
-      {props.back && <Button clicked={props.back}> back </Button>}
-      {props.next && <Button clicked={props.next}> next </Button>}
+      {props.back && <Button clicked={props.back}>Back</Button>}
+      {props.next && <Button clicked={props.next}>Next</Button>}
     </div>
   );
 };

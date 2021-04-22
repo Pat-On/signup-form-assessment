@@ -29,7 +29,7 @@ export const checkValidity = (value, rules) => {
     isValid = pattern.test(value) && isValid;
   }
 
-  // TODO
+  // TODO - needed improvements
   if (rules.isDOB) {
     isValid = moment(value, "MM/DD/YYYY", true).isValid() && isValid;
   }
