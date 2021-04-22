@@ -83,6 +83,7 @@ const SignUp = () => {
         ...signForm[formName],
         value: e.target.value,
         touched: true,
+        valid: checkValidity(e.target.value, signForm[formName].validation),
       },
     };
     setSignForm(updatedForm);
