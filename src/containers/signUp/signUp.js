@@ -13,8 +13,8 @@ const SignUp = () => {
     name: {
       name: "Name",
       placeholder: "Name",
-      // value: "Patryk", // FAKE DATA FOR DEV
-      value: "",
+      value: "Patryk", // FAKE DATA FOR DEV
+      // value: "",
 
       validation: {
         required: true,
@@ -26,8 +26,8 @@ const SignUp = () => {
     number: {
       name: "Phone Number",
       placeholder: "Phone number",
-      // value: "01234567890", // FAKE DATA FOR DEV
-      value: "",
+      value: "01234567890", // FAKE DATA FOR DEV
+      // value: "",
 
       validation: {
         required: true,
@@ -39,8 +39,8 @@ const SignUp = () => {
     email: {
       name: "E-mail",
       placeholder: "Email",
-      // value: "patryk@net.com", // FAKE DATA FOR DEV
-      value: "",
+      value: "patryk@net.com", // FAKE DATA FOR DEV
+      // value: "",
 
       validation: {
         required: true,
@@ -52,8 +52,8 @@ const SignUp = () => {
     dateOfBirth: {
       name: "Date of birth",
       placeholder: "Date of birth",
-      value: "",
-      // value: "01/01/1990", // FAKE DATA FOR DEV
+      // value: "",
+      value: "01/01/1990", // FAKE DATA FOR DEV
 
       validation: {
         required: true,
