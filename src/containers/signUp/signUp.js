@@ -15,7 +15,7 @@ const SignUp = () => {
     // !TODO form of the "data"
     name: {
       placeholder: "Name",
-      value: "",
+      value: "Patryk", // FAKE DATA FOR DEV
 
       validation: {
         required: true,
@@ -26,7 +26,7 @@ const SignUp = () => {
     },
     number: {
       placeholder: "Phone number",
-      value: "",
+      value: "01234567890", // FAKE DATA FOR DEV
 
       validation: {
         required: true,
@@ -37,7 +37,7 @@ const SignUp = () => {
     },
     email: {
       placeholder: "Email",
-      value: "",
+      value: "patryk@net.com", // FAKE DATA FOR DEV
 
       validation: {
         required: true,
@@ -48,7 +48,7 @@ const SignUp = () => {
     },
     dayOfBirth: {
       placeholder: "Date of birth",
-      value: "",
+      value: "01/01/1990", // FAKE DATA FOR DEV
 
       validation: {
         required: true,

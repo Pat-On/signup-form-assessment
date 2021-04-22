@@ -10,8 +10,8 @@ const confirmationFormPage = (props) => {
         formValues={props.formValues}
         formElementsKey={props.formElementsKey}
       />
-      {props.back && <Button clicked={props.back}> back </Button>}
-      {props.next && <Button clicked={props.next}> next </Button>}
+      {props.back && <Button clicked={props.back}> Back </Button>}
+      {props.next && <Button clicked={props.next}>Confirm & Continue</Button>}
     </Fragment>
   );
 };
