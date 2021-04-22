@@ -12,7 +12,8 @@ const SignUp = () => {
   const [signForm, setSignForm] = useState({
     name: {
       placeholder: "Name",
-      value: "Patryk", // FAKE DATA FOR DEV
+      // value: "Patryk", // FAKE DATA FOR DEV
+      value: "",
 
       validation: {
         required: true,
@@ -23,7 +24,8 @@ const SignUp = () => {
     },
     number: {
       placeholder: "Phone number",
-      value: "01234567890", // FAKE DATA FOR DEV
+      // value: "01234567890", // FAKE DATA FOR DEV
+      value: "",
 
       validation: {
         required: true,
@@ -34,7 +36,8 @@ const SignUp = () => {
     },
     email: {
       placeholder: "Email",
-      value: "patryk@net.com", // FAKE DATA FOR DEV
+      // value: "patryk@net.com", // FAKE DATA FOR DEV
+      value: "",
 
       validation: {
         required: true,
@@ -43,9 +46,10 @@ const SignUp = () => {
       valid: false,
       touched: false,
     },
-    dayOfBirth: {
+    dateOfBirth: {
       placeholder: "Date of birth",
-      value: "01/01/1990", // FAKE DATA FOR DEV
+      value: "",
+      // value: "01/01/1990", // FAKE DATA FOR DEV
 
       validation: {
         required: true,
@@ -114,6 +118,7 @@ const SignUp = () => {
           form={formElementKeyArray.slice(0, 2)}
           formInputHandler={inputChangeHandler}
           next={nextFunction}
+          buttonDisable={!(signForm.name.valid && signForm.number.valid)}
         />
       );
       break;
@@ -124,6 +129,7 @@ const SignUp = () => {
           formInputHandler={inputChangeHandler}
           back={backFunction}
           next={nextFunction}
+          buttonDisable={!(signForm.email.valid && signForm.dateOfBirth.valid)}
         />
       );
       break;

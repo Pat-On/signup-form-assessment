@@ -20,7 +20,11 @@ const signUpForm = (props) => {
         );
       })}
       {props.back && <Button clicked={props.back}>Back</Button>}
-      {props.next && <Button clicked={props.next}>Next</Button>}
+      {props.next && (
+        <Button clicked={props.next} buttonDisable={props.buttonDisable}>
+          Next
+        </Button>
+      )}
     </div>
   );
 };
