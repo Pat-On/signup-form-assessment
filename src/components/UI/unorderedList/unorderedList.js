@@ -1,10 +1,24 @@
-import React from "react";
+import React, { Fragment } from "react";
 import ListElement from "./listElement/listElement";
 
+import classes from "./unorderedList.module.css";
+
 const unorderedList = (props) => {
+  const keyObjectArr = [];
+  for (let key in props.formValues) {
+    keyObjectArr.push(key);
+  }
+
   return (
-    <ul>
-      <ListElement />
+    <ul className={classes.NoneStyle}>
+      {keyObjectArr.map((key, index) => {
+        return (
+          <Fragment key={props.formValues[key].placeholder}>
+            <ListElement value={props.formValues[key].placeholder + ":"} />
+            <ListElement value={props.formValues[key].value} />
+          </Fragment>
+        );
+      })}
     </ul>
   );
 };

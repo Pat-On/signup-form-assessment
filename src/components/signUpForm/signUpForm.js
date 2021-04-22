@@ -9,6 +9,9 @@ const signUpForm = (props) => {
       {props.form.map((item) => {
         return (
           <Input
+            invalid={!item.config.valid}
+            shouldValidate={item.config.validation}
+            touched={item.config.touched}
             key={item.id}
             value={item.config.value}
             placeholder={item.config.placeholder}
@@ -16,8 +19,8 @@ const signUpForm = (props) => {
           />
         );
       })}
-      {props.back && <Button clicked={props.back}> back </Button>}
-      {props.next && <Button clicked={props.next}> next </Button>}
+      {props.back && <Button clicked={props.back}>Back</Button>}
+      {props.next && <Button clicked={props.next}>Next</Button>}
     </div>
   );
 };

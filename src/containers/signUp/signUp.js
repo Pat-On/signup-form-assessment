@@ -4,17 +4,57 @@ import SignUpForm from "../../components/signUpForm/signUpForm";
 import ConfirmationFormPage from "./../../components/confirmationFormPage/confirmationFormPage";
 import CompletionFormScreen from "./../../components/completionFormScreen/completionFormScreen";
 
+import { checkValidity } from "./../../utility/utility";
+
 const SignUp = () => {
   const [pageControl, setPageControl] = useState(0);
 
-  // !TODO think over how to control name + p. num / email + DOB / confirmation / completion screen
   const [signForm, setSignForm] = useState({
-    // !TODO Think over validation requirements - name / phone number / email / DOB 18++
-    // !TODO form of the "data"
-    name: { placeholder: "name", value: "" },
-    number: { placeholder: "number", value: "" },
-    email: { placeholder: "email", value: "" },
-    dayOfBirth: { placeholder: "DOB", value: "" },
+    name: {
+      placeholder: "Name",
+      value: "Patryk", // FAKE DATA FOR DEV
+
+      validation: {
+        required: true,
+        isName: true,
+      },
+      valid: false,
+      touched: false,
+    },
+    number: {
+      placeholder: "Phone number",
+      value: "01234567890", // FAKE DATA FOR DEV
+
+      validation: {
+        required: true,
+        isTelNumber: true,
+      },
+      valid: false,
+      touched: false,
+    },
+    email: {
+      placeholder: "Email",
+      value: "patryk@net.com", // FAKE DATA FOR DEV
+
+      validation: {
+        required: true,
+        isEmail: true,
+      },
+      valid: false,
+      touched: false,
+    },
+    dayOfBirth: {
+      placeholder: "Date of birth",
+      value: "01/01/1990", // FAKE DATA FOR DEV
+
+      validation: {
+        required: true,
+        isDOB: true,
+        isEighteen: true,
+      },
+      valid: false,
+      touched: false,
+    },
   });
 
   const backFunction = () => {
@@ -33,12 +73,25 @@ const SignUp = () => {
     });
   };
 
+  const returnToMain = () => {
+    setPageControl(0);
+    //TODO Clear values in state
+  };
+
+  //TODO - finish it:
+  //confirmation function faking sending data
+  const confirmation = () => {
+    setPageControl(3);
+  };
+
   const inputChangeHandler = (e, formName) => {
     const updatedForm = {
       ...signForm,
       [formName]: {
         ...signForm[formName],
         value: e.target.value,
+        touched: true,
+        valid: checkValidity(e.target.value, signForm[formName].validation),
       },
     };
     setSignForm(updatedForm);
@@ -51,12 +104,6 @@ const SignUp = () => {
       config: signForm[key],
     });
   }
-
-  // const chosenTwoFormElements = formElementKeyArray.slice(
-  //   pageControl,
-  //   pageControl + 2
-  // );
-  // console.log(chosenTwoFormElements);
 
   let form = "";
   switch (pageControl) {
@@ -82,12 +129,18 @@ const SignUp = () => {
       break;
     case 2:
       //here should be req
-      //TODO: confirmation page
-      form = <ConfirmationFormPage back={backFunction} next={nextFunction} />;
+      console.log(formElementKeyArray);
+      form = (
+        <ConfirmationFormPage
+          back={backFunction}
+          next={confirmation}
+          formValues={signForm}
+          formElementsKey={formElementKeyArray}
+        />
+      );
       break;
     case 3:
-      //TODO: completion page
-      form = <CompletionFormScreen back={backFunction} next={nextFunction} />;
+      form = <CompletionFormScreen back={returnToMain} />;
       break;
     default:
       console.log("You should never see that");
