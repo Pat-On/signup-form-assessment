@@ -1,3 +1,5 @@
+import moment from "moment";
+
 export const checkValidity = (value, rules) => {
   let isValid = true;
   if (!rules) {
@@ -29,13 +31,13 @@ export const checkValidity = (value, rules) => {
 
   // TODO
   if (rules.isDOB) {
-    isValid = true;
+    isValid = moment(value, "MM/DD/YYYY", true).isValid();
   }
 
-  // TODO
-  if (rules.isEighteen) {
-    isValid = true;
-  }
+  // // TODO
+  // if (rules.isEighteen) {
+  //   isValid = true;
+  // }
 
   return isValid;
 };
