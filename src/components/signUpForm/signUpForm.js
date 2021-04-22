@@ -3,8 +3,6 @@ import Input from "../UI/input/input";
 import Button from "../UI/button/button";
 
 const signUpForm = (props) => {
-  console.log(props);
-  props.form.map((item) => console.log(item));
   return (
     <div>
       <h1>Sign-up Form</h1>
