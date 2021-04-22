@@ -13,10 +13,51 @@ const SignUp = () => {
   const [signForm, setSignForm] = useState({
     // !TODO Think over validation requirements - name / phone number / email / DOB 18++
     // !TODO form of the "data"
-    name: { placeholder: "name", value: "" },
-    number: { placeholder: "number", value: "" },
-    email: { placeholder: "email", value: "" },
-    dayOfBirth: { placeholder: "DOB", value: "" },
+    name: {
+      placeholder: "name",
+      value: "",
+
+      validation: {
+        required: true,
+        isName: true,
+      },
+      valid: false,
+      touched: false,
+    },
+    number: {
+      placeholder: "number",
+      value: "",
+
+      validation: {
+        required: true,
+        isTelNumber: true,
+      },
+      valid: false,
+      touched: false,
+    },
+    email: {
+      placeholder: "email",
+      value: "",
+
+      validation: {
+        required: true,
+        isEmail: true,
+      },
+      valid: false,
+      touched: false,
+    },
+    dayOfBirth: {
+      placeholder: "DOB",
+      value: "",
+
+      validation: {
+        required: true,
+        isDOB: true,
+        isEighteen: true,
+      },
+      valid: false,
+      touched: false,
+    },
   });
 
   const backFunction = () => {
@@ -41,6 +82,7 @@ const SignUp = () => {
       [formName]: {
         ...signForm[formName],
         value: e.target.value,
+        touched: true,
       },
     };
     setSignForm(updatedForm);
