@@ -29,17 +29,15 @@ export const checkValidity = (value, rules) => {
     isValid = pattern.test(value) && isValid;
   }
 
-  // TODO - needed improvements
+  // TODO - Think over how to improve it
   if (rules.isDOB) {
-    isValid = moment(value, "MM/DD/YYYY", true).isValid() && isValid;
+    isValid = moment(value, "DD/MM/YYYY", true).isValid() && isValid;
   }
 
-  // // TODO
   if (rules.isEighteen) {
     if (moment(value, "MM/DD/YYYY", true).isValid()) {
-      //!BUG Problem with the data format
-      console.log(moment().diff(value, "years", false));
-      isValid = moment().diff(value, "years", false) >= 18 && isValid;
+      const data = new Date(value);
+      isValid = moment().diff(data, "years", false) >= 18 && isValid;
     }
   }
 
