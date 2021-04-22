@@ -4,6 +4,8 @@ import SignUpForm from "../../components/signUpForm/signUpForm";
 import ConfirmationFormPage from "./../../components/confirmationFormPage/confirmationFormPage";
 import CompletionFormScreen from "./../../components/completionFormScreen/completionFormScreen";
 
+import { checkValidity } from "./../../utility/utility";
+
 const SignUp = () => {
   const [pageControl, setPageControl] = useState(0);
 
