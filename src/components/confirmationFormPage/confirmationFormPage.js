@@ -6,7 +6,10 @@ const confirmationFormPage = (props) => {
   return (
     <Fragment>
       <h1>Confirmation</h1>
-      <UnorderedList />
+      <UnorderedList
+        formValues={props.formValues}
+        formElementsKey={props.formElementsKey}
+      />
       {props.back && <Button clicked={props.back}> back </Button>}
       {props.next && <Button clicked={props.next}> next </Button>}
     </Fragment>

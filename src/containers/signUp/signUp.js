@@ -14,7 +14,7 @@ const SignUp = () => {
     // !TODO Think over validation requirements - name / phone number / email / DOB 18++
     // !TODO form of the "data"
     name: {
-      placeholder: "name",
+      placeholder: "Name",
       value: "",
 
       validation: {
@@ -25,7 +25,7 @@ const SignUp = () => {
       touched: false,
     },
     number: {
-      placeholder: "number",
+      placeholder: "Phone number",
       value: "",
 
       validation: {
@@ -36,7 +36,7 @@ const SignUp = () => {
       touched: false,
     },
     email: {
-      placeholder: "email",
+      placeholder: "Email",
       value: "",
 
       validation: {
@@ -47,7 +47,7 @@ const SignUp = () => {
       touched: false,
     },
     dayOfBirth: {
-      placeholder: "DOB",
+      placeholder: "Date of birth",
       value: "",
 
       validation: {
@@ -128,7 +128,15 @@ const SignUp = () => {
     case 2:
       //here should be req
       //TODO: confirmation page
-      form = <ConfirmationFormPage back={backFunction} next={nextFunction} />;
+      console.log(formElementKeyArray);
+      form = (
+        <ConfirmationFormPage
+          back={backFunction}
+          next={nextFunction}
+          formValues={signForm}
+          formElementsKey={formElementKeyArray}
+        />
+      );
       break;
     case 3:
       //TODO: completion page

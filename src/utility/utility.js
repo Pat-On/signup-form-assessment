@@ -39,7 +39,7 @@ export const checkValidity = (value, rules) => {
     if (moment(value, "MM/DD/YYYY", true).isValid()) {
       //!BUG Problem with the data format
       console.log(moment().diff(value, "years", false));
-      isValid = moment().diff(value, "years", false) && isValid;
+      isValid = moment().diff(value, "years", false) >= 18 && isValid;
     }
   }
 
