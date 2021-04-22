@@ -82,6 +82,11 @@ const SignUp = () => {
     //TODO Clear values in state
   };
 
+  //confirmation function faking sending data
+  const confirmation = () => {
+    setPageControl(3);
+  };
+
   const inputChangeHandler = (e, formName) => {
     const updatedForm = {
       ...signForm,
@@ -138,7 +143,7 @@ const SignUp = () => {
       form = (
         <ConfirmationFormPage
           back={backFunction}
-          next={nextFunction}
+          next={confirmation}
           formValues={signForm}
           formElementsKey={formElementKeyArray}
         />
