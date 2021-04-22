@@ -3,12 +3,17 @@ import Input from "../UI/input/input";
 import Button from "../UI/button/button";
 
 const signUpForm = (props) => {
+  console.log(props);
+  props.form.map((item) => console.log(item));
   return (
     <div>
       <h1>Sign-up Form</h1>
       {props.form.map((item) => {
         return (
           <Input
+            invalid={!item.config.valid}
+            shouldValidate={item.config.validation}
+            touched={item.config.touched}
             key={item.id}
             value={item.config.value}
             placeholder={item.config.placeholder}

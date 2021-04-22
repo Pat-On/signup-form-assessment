@@ -17,16 +17,19 @@ export const checkValidity = (value, rules) => {
     isValid = pattern.test(value) && isValid;
   }
 
-  // TODO
   if (rules.isName) {
     const pattern = /^[A-Za-z\s]+$/;
     isValid = pattern.test(value) && isValid;
   }
 
-  // TODO
   if (rules.isTelNumber) {
-    const pattern = /^(?:\W*\d){11}\W*$/; //UK phone number validation
+    const pattern = /^\d{11}$/; //simple regex
     isValid = pattern.test(value) && isValid;
+  }
+
+  // TODO
+  if (rules.isDOB) {
+    isValid = true;
   }
 
   // TODO
