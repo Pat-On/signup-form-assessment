@@ -4,9 +4,9 @@ import Button from "./../UI/button/button";
 const confirmationFormPage = (props) => {
   return (
     <Fragment>
-      <h1>Confirmation Screen - building</h1>
-      {props.back && <Button clicked={props.back}> back </Button>}
-      {props.next && <Button clicked={props.next}> next </Button>}
+      <h1>Thank You For Your Submission</h1>
+      <p>You will get an email with further instructions.</p>
+      {props.back && <Button clicked={props.back}> Main Page </Button>}
     </Fragment>
   );
 };

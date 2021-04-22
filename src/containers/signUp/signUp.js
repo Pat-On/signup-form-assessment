@@ -76,6 +76,12 @@ const SignUp = () => {
     });
   };
 
+  //TODO return to 1st page or home
+  const returnToMain = () => {
+    setPageControl(0);
+    //TODO Clear values in state
+  };
+
   const inputChangeHandler = (e, formName) => {
     const updatedForm = {
       ...signForm,
@@ -140,7 +146,7 @@ const SignUp = () => {
       break;
     case 3:
       //TODO: completion page
-      form = <CompletionFormScreen back={backFunction} next={nextFunction} />;
+      form = <CompletionFormScreen back={returnToMain} />;
       break;
     default:
       console.log("You should never see that");
