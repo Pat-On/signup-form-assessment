@@ -11,9 +11,10 @@ const SignUp = () => {
 
   const [signForm, setSignForm] = useState({
     name: {
+      name: "Name",
       placeholder: "Name",
-      value: "Patryk", // FAKE DATA FOR DEV
-      // value: "",
+      // value: "Patryk", // FAKE DATA FOR DEV
+      value: "",
 
       validation: {
         required: true,
@@ -23,9 +24,10 @@ const SignUp = () => {
       touched: false,
     },
     number: {
+      name: "Phone Number",
       placeholder: "Phone number",
-      value: "01234567890", // FAKE DATA FOR DEV
-      // value: "",
+      // value: "01234567890", // FAKE DATA FOR DEV
+      value: "",
 
       validation: {
         required: true,
@@ -35,6 +37,7 @@ const SignUp = () => {
       touched: false,
     },
     email: {
+      name: "E-mail",
       placeholder: "Email",
       // value: "patryk@net.com", // FAKE DATA FOR DEV
       value: "",
@@ -47,6 +50,7 @@ const SignUp = () => {
       touched: false,
     },
     dateOfBirth: {
+      name: "Date of birth",
       placeholder: "Date of birth",
       value: "",
       // value: "01/01/1990", // FAKE DATA FOR DEV

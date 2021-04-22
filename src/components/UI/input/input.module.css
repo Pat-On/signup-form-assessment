@@ -1,3 +1,10 @@
+.inputClass {
+    width: 90%;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 8px;
+}
+
 .Invalid {
     background-color: lightcoral;
 }
