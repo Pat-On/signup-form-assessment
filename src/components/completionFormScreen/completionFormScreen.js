@@ -19,7 +19,7 @@ const confirmationFormPage = (props) => {
         {props.back && (
           <div className={classes.buttonWrapper}>
             <Button assignedClass={"nextButton"} clicked={props.back}>
-              Main Page
+              OK
             </Button>
           </div>
         )}
