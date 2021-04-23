@@ -26,8 +26,8 @@ const SignUp = () => {
     number: {
       name: "Phone Number",
       placeholder: "01234567890",
-      // value: "01234567890", // FAKE DATA FOR DEV
-      value: "",
+      value: "01234567890", // FAKE DATA FOR DEV
+      // value: "",
 
       validation: {
         required: true,
