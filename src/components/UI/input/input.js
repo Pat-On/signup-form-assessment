@@ -3,7 +3,7 @@ import classes from "./input.module.css";
 
 //TODO proper CSS and responsive
 const input = (props) => {
-  const inputCSSClasses = [];
+  const inputCSSClasses = [classes.inputClass];
 
   if (props.invalid && props.shouldValidate && props.touched) {
     inputCSSClasses.push(classes.Invalid);

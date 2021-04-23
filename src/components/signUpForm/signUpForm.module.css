@@ -1,0 +1,77 @@
+.title {
+    margin-top: 3vh;
+    margin-bottom: 4vh;;
+    font-size: 36px;
+    
+}
+
+.container {
+    width: 90%;
+    height: 72vh;
+    margin: 15vh auto;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding-top: 2vh;
+    display: relative;
+}
+
+.inputContainer {
+margin: 2vh 0;
+}
+
+.inputFieldName {
+    width: 90%;
+    display: block-inline;
+    margin: auto;
+    text-align: left;
+    width: 90%;
+    height: 50px;
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+.flexContainerGeneral {
+    display: flex;
+     justify-content: flex-end; 
+    bottom: 0;
+    margin-top: 6vh;
+}
+
+.flexContainerToRight {
+  justify-content: flex-end; 
+  padding-right: 5%;
+}
+
+.flexContainerCentered {
+    justify-content: space-around; 
+    padding: 0 5%;
+}
+
+.buttonWrapper {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+
+@media  (max-width: 480px) and (min-width: 320px) {
+.container {
+/* background-color: lightblue */
+}
+}
+
+@media (max-width: 700px) and (min-width: 481px){
+.container {
+    background-color: lightcoral
+}
+}
+@media (max-width: 1000px) and (min-width: 701px){
+.container {
+    background-color: yellow
+}
+}
+@media (min-width: 1001px) {
+.container {
+    background-color: lightblue
+}
+}
