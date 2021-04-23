@@ -25,7 +25,7 @@ const SignUp = () => {
     },
     number: {
       name: "Phone Number",
-      placeholder: "Phone number",
+      placeholder: "01234567890",
       value: "01234567890", // FAKE DATA FOR DEV
       // value: "",
 
@@ -38,7 +38,7 @@ const SignUp = () => {
     },
     email: {
       name: "E-mail",
-      placeholder: "Email",
+      placeholder: "example@email.com",
       value: "patryk@net.com", // FAKE DATA FOR DEV
       // value: "",
 
@@ -51,7 +51,7 @@ const SignUp = () => {
     },
     dateOfBirth: {
       name: "Date of birth",
-      placeholder: "Date of birth",
+      placeholder: "dd/mm/yyyy",
       // value: "",
       value: "01/01/1990", // FAKE DATA FOR DEV
 

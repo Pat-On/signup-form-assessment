@@ -16,7 +16,7 @@ const unorderedList = (props) => {
           <Fragment key={props.formValues[key].placeholder}>
             <ListElement
               bolded={true}
-              value={props.formValues[key].placeholder + ":"}
+              value={props.formValues[key].name + ":"}
             />
             <ListElement value={props.formValues[key].value} />
           </Fragment>

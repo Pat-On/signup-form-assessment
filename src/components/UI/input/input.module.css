@@ -5,6 +5,12 @@
     padding-left: 8px;
 }
 
+.inputClass::placeholder {
+    opacity: 0.6;
+    font-style: italic;
+}
+
 .Invalid {
-    background-color: lightcoral;
+    border: 1px solid red;
+    background-color: #FFCCCB
 }

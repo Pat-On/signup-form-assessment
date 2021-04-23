@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Button from "./../UI/button/button";
 
 import classes from "./completionFormScreen.module.css";
@@ -19,7 +19,7 @@ const confirmationFormPage = (props) => {
         {props.back && (
           <div className={classes.buttonWrapper}>
             <Button assignedClass={"nextButton"} clicked={props.back}>
-              Main Page
+              OK
             </Button>
           </div>
         )}
