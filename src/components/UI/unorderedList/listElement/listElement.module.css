@@ -1,4 +1,7 @@
 .liConfElement {
-    font-size: 18px;
-    padding: 2px;
+    font-size: 20px;
+    padding: 3px;
+}
+.bolded {
+    font-weight: bold;
 }

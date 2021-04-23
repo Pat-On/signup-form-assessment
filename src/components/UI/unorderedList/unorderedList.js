@@ -14,7 +14,10 @@ const unorderedList = (props) => {
       {keyObjectArr.map((key, index) => {
         return (
           <Fragment key={props.formValues[key].placeholder}>
-            <ListElement value={props.formValues[key].placeholder + ":"} />
+            <ListElement
+              bolded={true}
+              value={props.formValues[key].placeholder + ":"}
+            />
             <ListElement value={props.formValues[key].value} />
           </Fragment>
         );

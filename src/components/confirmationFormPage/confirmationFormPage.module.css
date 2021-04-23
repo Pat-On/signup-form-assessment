@@ -1,6 +1,7 @@
 .title {
-    margin-top: 4vh;
+    margin-top: 3vh;
     font-size: 36px;
+    margin-bottom: 1vh;
     
 }
 
@@ -12,4 +13,27 @@
     border-radius: 10px;
     padding-top: 2vh;
     display: relative;
+}
+
+.flexContainerGeneral {
+    display: flex;
+     justify-content: flex-end; 
+    bottom: 0;
+    margin-top: 2vh;
+}
+
+.flexContainerToRight {
+  justify-content: flex-end; 
+  padding-right: 5%;
+}
+
+.flexContainerCentered {
+    justify-content: space-around; 
+    padding: 0 5%;
+}
+
+.buttonWrapper {
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
