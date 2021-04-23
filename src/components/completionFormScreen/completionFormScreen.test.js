@@ -5,7 +5,6 @@ import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 
 import CompletionFormScreen from "./completionFormScreen";
 import Button from "./../UI/button/button";
-import classes from "./completionFormScreen.module.css";
 
 configure({ adapter: new Adapter() });
 
