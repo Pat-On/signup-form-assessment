@@ -35,7 +35,7 @@ padding: 4px 0 4px;
 
 .flexContainerGeneral {
     display: flex;
-     justify-content: flex-end; 
+    /* justify-content: flex-end;  */
     bottom: 0;
     /* margin-top: 6vh; */
     margin-top: 30px;
@@ -66,19 +66,28 @@ padding: 4px 0 4px;
 
 @media (max-width: 700px) and (min-width: 481px){
     .container {
-        background-color: lightcoral;
+        /* background-color: lightcoral; */
         width: 70%;
     }
 }
 @media (max-width: 1000px) and (min-width: 701px){
     .container {
-        background-color: yellow;
+        /* background-color: yellow; */
         width: 70%;
     }
 }
 @media (min-width: 1001px) {
     .container {
-        background-color: lightblue;
+        /* background-color: lightblue; */
         width: 50%;
+        max-width: 750px;
+    }
+    .flexContainerCentered {
+        justify-content: space-evenly; 
+        padding: 0 5%;
+    }
+    .flexContainerToRight {
+        justify-content: flex-end; 
+        padding-right: 19.2%;
     }
 }
