@@ -87,7 +87,6 @@ const SignUp = () => {
     //TODO Clear values in state
     let newState = { ...signForm };
     for (let key of Object.keys(signForm)) {
-      console.log(key);
       newState = {
         ...newState,
         [key]: {
@@ -105,7 +104,6 @@ const SignUp = () => {
   const confirmation = () => {
     setLoadingControl(true);
     setTimeout(() => {
-      console.log("1");
       setPageControl(3);
       setLoadingControl(false);
     }, 800);
@@ -158,7 +156,6 @@ const SignUp = () => {
       break;
     case 2:
       //here should be req
-      console.log(formElementKeyArray);
       form = (
         <ConfirmationFormPage
           loadingControl={loadingControl}
