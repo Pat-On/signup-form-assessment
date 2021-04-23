@@ -5,6 +5,13 @@ import Button from "../UI/button/button";
 import classes from "./signUpForm.module.css";
 
 const signUpForm = (props) => {
+  const flexClassStyleArr = [classes.flexContainerGeneral];
+
+  if (props.next && props.back)
+    flexClassStyleArr.push(classes.flexContainerCentered);
+  if (props.next && !props.back)
+    flexClassStyleArr.push(classes.flexContainerToRight);
+
   return (
     <div className={classes.container}>
       <h1 className={classes.title}>Sign-Up</h1>
@@ -23,20 +30,24 @@ const signUpForm = (props) => {
           </div>
         );
       })}
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
+      <div className={flexClassStyleArr.join(" ")}>
         {props.back && (
-          <Button assignedClass={"backButton"} clicked={props.back}>
-            Back
-          </Button>
+          <div className={classes.buttonWrapper}>
+            <Button assignedClass={"backButton"} clicked={props.back}>
+              Back
+            </Button>
+          </div>
         )}
         {props.next && (
-          <Button
-            assignedClass={"nextButton"}
-            clicked={props.next}
-            buttonDisable={props.buttonDisable}
-          >
-            Next
-          </Button>
+          <div className={classes.buttonWrapper}>
+            <Button
+              assignedClass={"nextButton"}
+              clicked={props.next}
+              buttonDisable={props.buttonDisable}
+            >
+              Next
+            </Button>
+          </div>
         )}
       </div>
     </div>
