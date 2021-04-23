@@ -10,12 +10,20 @@ const confirmationFormPage = (props) => {
       <p className={classes.subTitle}>
         You will get an email with further instructions.
       </p>
-      {props.back && (
-        <Button assignedClass={"nextButton"} clicked={props.back}>
-          {" "}
-          Main Page{" "}
-        </Button>
-      )}
+      <div
+        className={[
+          classes.flexContainerGeneral,
+          classes.flexContainerCentered,
+        ].join(" ")}
+      >
+        {props.back && (
+          <div className={classes.buttonWrapper}>
+            <Button assignedClass={"nextButton"} clicked={props.back}>
+              Main Page
+            </Button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

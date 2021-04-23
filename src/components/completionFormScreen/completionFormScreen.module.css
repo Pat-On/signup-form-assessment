@@ -1,6 +1,7 @@
 .title {
     margin-top: 4vh;
     font-size: 36px;
+    line-height: 1.8;
     width: 90%;
     display: inline-block;
 }
@@ -8,7 +9,8 @@
 .subTitle {
     margin-top: 2vh;
     font-size: 20px;
-    width: 90%;
+    line-height: 1.5;
+    width: 70%;
     display: inline-block;
 }
 
@@ -20,4 +22,16 @@
     border-radius: 10px;
     padding-top: 2vh;
     display: relative;
+}
+
+.flexContainerGeneral {
+    display: flex;
+     justify-content: flex-end; 
+    bottom: 0;
+    margin-top: 6vh;
+}
+
+.flexContainerCentered {
+    justify-content: space-around; 
+    padding: 0 5%;
 }
