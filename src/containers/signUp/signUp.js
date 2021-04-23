@@ -93,10 +93,12 @@ const SignUp = () => {
         [key]: {
           ...newState[key],
           value: "",
+          touched: false,
+          valid: false,
         },
       };
     }
-    // setSignForm(newState);
+    setSignForm(newState);
   };
 
   //confirmation function faking sending data
@@ -139,7 +141,7 @@ const SignUp = () => {
           form={formElementKeyArray.slice(0, 2)}
           formInputHandler={inputChangeHandler}
           next={nextFunction}
-          // buttonDisable={!(signForm.name.valid && signForm.number.valid)}
+          buttonDisable={!(signForm.name.valid && signForm.number.valid)}
         />
       );
       break;
@@ -150,7 +152,7 @@ const SignUp = () => {
           formInputHandler={inputChangeHandler}
           back={backFunction}
           next={nextFunction}
-          // buttonDisable={!(signForm.email.valid && signForm.dateOfBirth.valid)}
+          buttonDisable={!(signForm.email.valid && signForm.dateOfBirth.valid)}
         />
       );
       break;
