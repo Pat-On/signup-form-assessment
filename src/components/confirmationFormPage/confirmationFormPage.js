@@ -1,7 +1,6 @@
 import React from "react";
 import UnorderedList from "./../UI/unorderedList/unorderedList";
 import Button from "./../UI/button/button";
-
 import classes from "./confirmationFormPage.module.css";
 
 const confirmationFormPage = (props) => {
@@ -12,6 +11,18 @@ const confirmationFormPage = (props) => {
   if (props.next && !props.back)
     flexClassStyleArr.push(classes.flexContainerToRight);
 
+  let buttonContinue = (
+    <Button assignedClass={"nextButton"} clicked={props.next}>
+      Continue
+    </Button>
+  );
+  if (props.loadingControl)
+    buttonContinue = (
+      <Button assignedClass={"nextButton"} clicked={props.next}>
+        Loading...
+      </Button>
+    );
+
   return (
     <div className={classes.container}>
       <h1 className={classes.title}>Confirmation</h1>
@@ -19,6 +30,7 @@ const confirmationFormPage = (props) => {
         formValues={props.formValues}
         formElementsKey={props.formElementsKey}
       />
+
       <div className={flexClassStyleArr.join(" ")}>
         {props.back && (
           <div className={classes.buttonWrapper}>
@@ -27,12 +39,9 @@ const confirmationFormPage = (props) => {
             </Button>
           </div>
         )}
+
         {props.next && (
-          <div className={classes.buttonWrapper}>
-            <Button assignedClass={"nextButton"} clicked={props.next}>
-              Continue
-            </Button>
-          </div>
+          <div className={classes.buttonWrapper}>{buttonContinue}</div>
         )}
       </div>
     </div>

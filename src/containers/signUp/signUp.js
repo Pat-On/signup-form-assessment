@@ -8,6 +8,7 @@ import { checkValidity } from "./../../utility/utility";
 
 const SignUp = () => {
   const [pageControl, setPageControl] = useState(0);
+  const [loadingControl, setLoadingControl] = useState(false);
 
   const [signForm, setSignForm] = useState({
     name: {
@@ -89,7 +90,11 @@ const SignUp = () => {
   //TODO - finish it:
   //confirmation function faking sending data
   const confirmation = () => {
-    setPageControl(3);
+    setLoadingControl(true);
+    setTimeout(() => {
+      setPageControl(3);
+      setLoadingControl(false);
+    }, 800);
   };
 
   const inputChangeHandler = (e, formName) => {
@@ -142,6 +147,7 @@ const SignUp = () => {
       console.log(formElementKeyArray);
       form = (
         <ConfirmationFormPage
+          loadingControl={loadingControl}
           back={backFunction}
           next={confirmation}
           formValues={signForm}
