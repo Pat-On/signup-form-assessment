@@ -12,7 +12,6 @@ const input = (props) => {
   return (
     <input
       className={inputCSSClasses.join(" ")}
-      style={{ display: "block", margin: "auto" }}
       placeholder={props.placeholder}
       onChange={props.formInputHandler}
       value={props.value}
