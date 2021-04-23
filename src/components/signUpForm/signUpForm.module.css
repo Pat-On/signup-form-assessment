@@ -8,9 +8,9 @@
 .container {
     width: 90%;
     height: 72vh;
-    min-height: 360px;
+    min-height: 480px;
     max-height: 550px;
-    margin: 15rem auto;
+    margin: 10vh auto;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding-top: 2vh;
@@ -18,8 +18,8 @@
 }
 
 .inputContainer {
-margin: 2rem 0;
-padding: 4px 0 4px; 
+    margin: 2vh 0;
+    padding: 4px 0 4px; 
 }
 
 .inputFieldName {
