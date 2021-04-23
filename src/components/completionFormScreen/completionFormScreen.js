@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Button from "./../UI/button/button";
 
 import classes from "./completionFormScreen.module.css";
