@@ -85,13 +85,25 @@ const SignUp = () => {
   const returnToMain = () => {
     setPageControl(0);
     //TODO Clear values in state
+    let newState = { ...signForm };
+    for (let key of Object.keys(signForm)) {
+      console.log(key);
+      newState = {
+        ...newState,
+        [key]: {
+          ...newState[key],
+          value: "",
+        },
+      };
+    }
+    // setSignForm(newState);
   };
 
-  //TODO - finish it:
   //confirmation function faking sending data
   const confirmation = () => {
     setLoadingControl(true);
     setTimeout(() => {
+      console.log("1");
       setPageControl(3);
       setLoadingControl(false);
     }, 800);
