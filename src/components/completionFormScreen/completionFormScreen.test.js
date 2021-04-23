@@ -5,6 +5,7 @@ import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 
 import CompletionFormScreen from "./completionFormScreen";
 import Button from "./../UI/button/button";
+import classes from "./completionFormScreen.module.css";
 
 configure({ adapter: new Adapter() });
 
@@ -19,7 +20,7 @@ describe("<CompletionFormScreen/>", () => {
     expect(wrapper.find(Button)).toHaveLength(1);
   });
 
-  it("should render one <Button> item when props.back is sent", () => {
+  it("should render zero <Button> item when props.back is not sent", () => {
     expect(wrapper.find(Button)).toHaveLength(0);
   });
 });
