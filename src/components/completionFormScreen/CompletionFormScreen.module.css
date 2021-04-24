@@ -24,8 +24,8 @@
     border-radius: 10px;
     /* padding-top: 2vh; */
     display: relative;
-    
-     padding-top: 20px;
+    padding-top: 20px;
+    text-align: center;
 }
 
 .flexContainerGeneral {
@@ -64,12 +64,10 @@
 @media (min-width: 1001px) {
     .title {
         width: 70%;
-      }
-
-    .subTitle {
-     width: 50%;
     }
-
+    .subTitle {
+        width: 50%;
+    }
     .container {
         /* background-color: lightblue; */
         width: 50%;

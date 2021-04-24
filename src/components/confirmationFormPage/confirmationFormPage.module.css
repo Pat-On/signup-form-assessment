@@ -2,7 +2,6 @@
     margin-top: 25px;
     margin-bottom: 10px;
     font-size: 36px;
-    
 }
 
 .container {
@@ -15,18 +14,19 @@
     border-radius: 10px;
     padding-top: 2vh;
     display: relative;
+    text-align: center;
 }
 
 .flexContainerGeneral {
     display: flex;
-     justify-content: flex-end; 
+    justify-content: flex-end; 
     bottom: 0;
     margin-top: 2vh;
 }
 
 .flexContainerToRight {
-  justify-content: flex-end; 
-  padding-right: 5%;
+    justify-content: flex-end; 
+    padding-right: 5%;
 }
 
 .flexContainerCentered {
@@ -40,11 +40,11 @@
     display: flex;
 }
 
-@media  (max-width: 480px) and (min-width: 320px) {
+/* @media  (max-width: 480px) and (min-width: 320px) {
     .container {
 
     }
-}
+} */
 
 @media (max-width: 700px) and (min-width: 481px){
     .container {

@@ -1,11 +1,10 @@
 import React from "react";
 import classes from "./Button.module.css";
 
-//TODO proper CSS and responsive
 const button = (props) => {
   let button = (
     <button
-      className={(classes.Button, classes[props.assignedClass])}
+      className={[classes.Button, classes[props.assignedClass]].join(" ")}
       onClick={props.clicked}
     >
       {props.children}
@@ -20,7 +19,7 @@ const button = (props) => {
     button = (
       <button
         disabled
-        className={(classes.Button, classes[props.assignedClass])}
+        className={[classes.Button, classes[props.assignedClass]].join(" ")}
         onClick={props.clicked}
       >
         {props.children}
