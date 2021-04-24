@@ -3,9 +3,9 @@ import React from "react";
 import { configure, shallow } from "enzyme";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 
-import SignUpForm from "./signUpForm";
-import Button from "../UI/button/button";
-import Input from "../UI/input/input";
+import SignUpForm from "./SignUpForm";
+import Button from "../UI/button/Button";
+import Input from "../UI/input/Input";
 
 configure({ adapter: new Adapter() });
 

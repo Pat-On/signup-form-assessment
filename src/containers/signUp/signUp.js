@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import SignUpForm from "../../components/signUpForm/signUpForm";
-import ConfirmationFormPage from "./../../components/confirmationFormPage/confirmationFormPage";
-import CompletionFormScreen from "./../../components/completionFormScreen/completionFormScreen";
+import SignUpForm from "../../components/signUpForm/SignUpForm";
+import ConfirmationFormPage from "../../components/confirmationFormPage/ConfirmationFormPage";
+import CompletionFormScreen from "../../components/completionFormScreen/CompletionFormScreen";
 
-import { checkValidity } from "./../../utility/utility";
+import { checkValidity } from "../../utility/utility";
 
 const SignUp = () => {
   const [pageControl, setPageControl] = useState(0);

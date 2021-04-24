@@ -3,8 +3,8 @@ import React from "react";
 import { configure, shallow } from "enzyme";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 
-import ConfirmationFormPage from "./confirmationFormPage";
-import Button from "./../UI/button/button";
+import ConfirmationFormPage from "./ConfirmationFormPage";
+import Button from "../UI/button/Button";
 
 configure({ adapter: new Adapter() });
 

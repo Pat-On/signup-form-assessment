@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
-import ListElement from "./listElement/listElement";
+import ListElement from "./listElement/ListElement";
 
-import classes from "./unorderedList.module.css";
+import classes from "./UnorderedList.module.css";
 
 const unorderedList = (props) => {
   const keyObjectArr = [];

@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./button.module.css";
+import classes from "./Button.module.css";
 
 //TODO proper CSS and responsive
 const button = (props) => {

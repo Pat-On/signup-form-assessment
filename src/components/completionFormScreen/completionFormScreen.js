@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "./../UI/button/button";
+import Button from "../UI/button/Button";
 
-import classes from "./completionFormScreen.module.css";
+import classes from "./CompletionFormScreen.module.css";
 
 const confirmationFormPage = (props) => {
   return (

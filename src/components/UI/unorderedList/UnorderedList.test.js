@@ -3,8 +3,8 @@ import React from "react";
 import { configure, shallow } from "enzyme";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 
-import UnorderedList from "./unorderedList";
-import ListElement from "./listElement/listElement";
+import UnorderedList from "./UnorderedList";
+import ListElement from "./listElement/ListElement";
 
 configure({ adapter: new Adapter() });
 

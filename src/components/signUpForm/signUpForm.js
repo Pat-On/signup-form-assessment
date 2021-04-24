@@ -1,8 +1,8 @@
 import React from "react";
-import Input from "../UI/input/input";
-import Button from "../UI/button/button";
+import Input from "../UI/input/Input";
+import Button from "../UI/button/Button";
 
-import classes from "./signUpForm.module.css";
+import classes from "./SignUpForm.module.css";
 
 const signUpForm = (props) => {
   const flexClassStyleArr = [classes.flexContainerGeneral];
