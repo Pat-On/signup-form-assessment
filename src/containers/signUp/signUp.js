@@ -14,7 +14,7 @@ const NAME_AND_PHONE_NUMBER_SLICE_INDEX = [0, 2];
 const EMAIL_AND_DATE_OF_BIRTH_SLICE_INDEX = [2, 4];
 
 const SignUp = () => {
-  const [pageControl, setPageControl] = useState(0);
+  const [pageControl, setPageControl] = useState(FIRST_FORM_PAGE);
   const [loadingControl, setLoadingControl] = useState(false);
 
   const [signForm, setSignForm] = useState({
@@ -91,7 +91,6 @@ const SignUp = () => {
 
   const returnToMain = () => {
     setPageControl(FIRST_FORM_PAGE);
-    //TODO Clear values in state
     let newState = { ...signForm };
     for (let key of Object.keys(signForm)) {
       newState = {
