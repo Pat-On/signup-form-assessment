@@ -8,7 +8,6 @@ const unorderedList = (props) => {
   for (let key in props.formValues) {
     keyObjectArr.push(key);
   }
-  console.log(keyObjectArr);
   return (
     <ul className={classes.NoneStyle}>
       {keyObjectArr.map((key, index) => {

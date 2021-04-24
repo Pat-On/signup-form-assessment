@@ -6,6 +6,11 @@ import CompletionFormScreen from "../../components/completionFormScreen/Completi
 
 import { checkValidity } from "../../utility/utility";
 
+const FIRST_FORM_PAGE = 0;
+const SECOND_FORM_PAGE = 1;
+const THIRD_FORM_PAGE = 2;
+const LAST_FORM_PAGE = 3;
+
 const SignUp = () => {
   const [pageControl, setPageControl] = useState(0);
   const [loadingControl, setLoadingControl] = useState(false);
@@ -68,7 +73,7 @@ const SignUp = () => {
 
   const backFunction = () => {
     setPageControl(() => {
-      if (pageControl === 0) return 0;
+      if (pageControl === FIRST_FORM_PAGE) return FIRST_FORM_PAGE;
       const page = pageControl;
       return page - 1;
     });
@@ -76,7 +81,7 @@ const SignUp = () => {
 
   const nextFunction = () => {
     setPageControl(() => {
-      if (pageControl === 3) return 3;
+      if (pageControl === LAST_FORM_PAGE) return LAST_FORM_PAGE;
       const page = pageControl;
       return page + 1;
     });
@@ -132,7 +137,7 @@ const SignUp = () => {
 
   let form = "";
   switch (pageControl) {
-    case 0:
+    case FIRST_FORM_PAGE:
       form = (
         <SignUpForm
           readonly={false}
@@ -143,7 +148,7 @@ const SignUp = () => {
         />
       );
       break;
-    case 1:
+    case SECOND_FORM_PAGE:
       form = (
         <SignUpForm
           form={formElementKeyArray.slice(2, 4)}
@@ -154,7 +159,7 @@ const SignUp = () => {
         />
       );
       break;
-    case 2:
+    case THIRD_FORM_PAGE:
       //here should be req
       form = (
         <ConfirmationFormPage
@@ -166,7 +171,7 @@ const SignUp = () => {
         />
       );
       break;
-    case 3:
+    case LAST_FORM_PAGE:
       form = <CompletionFormScreen back={returnToMain} />;
       break;
     default:
