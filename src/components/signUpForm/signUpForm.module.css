@@ -1,20 +1,20 @@
 .title {
-    margin-top: 25px;
-    margin-bottom: 25px;
     font-size: 36px;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 .container {
-    width: 90%;
-    height: 72vh;
-    min-height: 480px;
-    max-height: 550px;
-    margin: 15vh auto;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    padding-top: 2vh;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
     display: relative;
+    height: 72vh;
+    margin: 15vh auto;
+    max-height: 550px;
+    min-height: 480px;
+    padding-top: 2vh;
     text-align: center;
+    width: 90%;
 }
 
 .inputContainer {
@@ -23,21 +23,18 @@
 }
 
 .inputFieldName {
-    width: 90%;
     display: block-inline;
+    font-size: 20px;
+    height: 50px;
     margin: auto;
+    padding-top: 10px;
     text-align: left;
     width: 90%;
-    height: 50px;
-    font-size: 20px;
-    padding-top: 10px;
 }
 
 .flexContainerGeneral {
-    display: flex;
-    /* justify-content: flex-end;  */
     bottom: 0;
-    /* margin-top: 6vh; */
+    display: flex;
     margin-top: 30px;
 }
 
@@ -52,9 +49,9 @@
 }
 
 .buttonWrapper {
-    padding: 0;
-    margin: 0;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -79,8 +76,8 @@
 @media (min-width: 1001px) {
     .container {
         /* background-color: lightblue; */
-        width: 50%;
         max-width: 750px;
+        width: 50%;
     }
     .flexContainerCentered {
         justify-content: space-evenly; 
