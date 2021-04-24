@@ -1,6 +1,6 @@
 import "./App.css";
 
-import SignUp from "./containers/signUp/signUp";
+import SignUp from "./containers/signUp/SignUp";
 
 // !TODO redirection to sign-up page
 

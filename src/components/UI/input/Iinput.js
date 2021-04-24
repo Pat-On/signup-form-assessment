@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./input.module.css";
+import classes from "./Input.module.css";
 
 //TODO proper CSS and responsive
 const input = (props) => {

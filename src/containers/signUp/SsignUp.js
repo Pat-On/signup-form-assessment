@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 
-import SignUpForm from "../../components/signUpForm/signUpForm";
-import ConfirmationFormPage from "./../../components/confirmationFormPage/confirmationFormPage";
-import CompletionFormScreen from "./../../components/completionFormScreen/completionFormScreen";
+import SignUpForm from "../../components/signUpForm/SignUpForm";
+import ConfirmationFormPage from "../../components/confirmationFormPage/ConfirmationFormPage";
+import CompletionFormScreen from "../../components/completionFormScreen/CompletionFormScreen";
 
-import { checkValidity } from "./../../utility/utility";
+import { checkValidity } from "../../utility/utility";
+
+const FIRST_FORM_PAGE = 0;
+const SECOND_FORM_PAGE = 1;
+const THIRD_FORM_PAGE = 2;
+const LAST_FORM_PAGE = 3;
+const NAME_AND_PHONE_NUMBER_SLICE_INDEX = [0, 2];
+const EMAIL_AND_DATE_OF_BIRTH_SLICE_INDEX = [2, 4];
 
 const SignUp = () => {
-  const [pageControl, setPageControl] = useState(0);
+  const [pageControl, setPageControl] = useState(FIRST_FORM_PAGE);
   const [loadingControl, setLoadingControl] = useState(false);
 
   const [signForm, setSignForm] = useState({
@@ -68,7 +75,7 @@ const SignUp = () => {
 
   const backFunction = () => {
     setPageControl(() => {
-      if (pageControl === 0) return 0;
+      if (pageControl === FIRST_FORM_PAGE) return FIRST_FORM_PAGE;
       const page = pageControl;
       return page - 1;
     });
@@ -76,15 +83,14 @@ const SignUp = () => {
 
   const nextFunction = () => {
     setPageControl(() => {
-      if (pageControl === 3) return 3;
+      if (pageControl === LAST_FORM_PAGE) return LAST_FORM_PAGE;
       const page = pageControl;
       return page + 1;
     });
   };
 
   const returnToMain = () => {
-    setPageControl(0);
-    //TODO Clear values in state
+    setPageControl(FIRST_FORM_PAGE);
     let newState = { ...signForm };
     for (let key of Object.keys(signForm)) {
       newState = {
@@ -104,7 +110,7 @@ const SignUp = () => {
   const confirmation = () => {
     setLoadingControl(true);
     setTimeout(() => {
-      setPageControl(3);
+      setPageControl(LAST_FORM_PAGE);
       setLoadingControl(false);
     }, 800);
   };
@@ -132,21 +138,23 @@ const SignUp = () => {
 
   let form = "";
   switch (pageControl) {
-    case 0:
+    case FIRST_FORM_PAGE:
       form = (
         <SignUpForm
           readonly={false}
-          form={formElementKeyArray.slice(0, 2)}
+          form={formElementKeyArray.slice(...NAME_AND_PHONE_NUMBER_SLICE_INDEX)}
           formInputHandler={inputChangeHandler}
           next={nextFunction}
           // buttonDisable={!(signForm.name.valid && signForm.number.valid)}
         />
       );
       break;
-    case 1:
+    case SECOND_FORM_PAGE:
       form = (
         <SignUpForm
-          form={formElementKeyArray.slice(2, 4)}
+          form={formElementKeyArray.slice(
+            ...EMAIL_AND_DATE_OF_BIRTH_SLICE_INDEX
+          )}
           formInputHandler={inputChangeHandler}
           back={backFunction}
           next={nextFunction}
@@ -154,7 +162,7 @@ const SignUp = () => {
         />
       );
       break;
-    case 2:
+    case THIRD_FORM_PAGE:
       //here should be req
       form = (
         <ConfirmationFormPage
@@ -166,7 +174,7 @@ const SignUp = () => {
         />
       );
       break;
-    case 3:
+    case LAST_FORM_PAGE:
       form = <CompletionFormScreen back={returnToMain} />;
       break;
     default:

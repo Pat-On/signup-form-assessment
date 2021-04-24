@@ -1,6 +1,6 @@
 import React from "react";
 
-import classes from "./listElement.module.css";
+import classes from "./ListElement.module.css";
 
 const listElement = (props) => {
   const classList = [classes.liConfElement];
