@@ -14,9 +14,21 @@ const NAME_AND_PHONE_NUMBER_SLICE_INDEX = [0, 2];
 const EMAIL_AND_DATE_OF_BIRTH_SLICE_INDEX = [2, 4];
 
 const SignUp = () => {
+  /**
+   * State: pageControl and setPageControl are used to managing the displayed page of form
+   */
   const [pageControl, setPageControl] = useState(FIRST_FORM_PAGE);
+
+  /**
+   * State: responsible for controlling the process of displaying the http req in UI
+   */
   const [loadingControl, setLoadingControl] = useState(false);
 
+  /**
+   * State: signForm and setSignForm are used to provide:
+   *  -information about requirements of validation
+   *  -storing the input from user
+   */
   const [signForm, setSignForm] = useState({
     name: {
       name: "Name",
@@ -73,6 +85,11 @@ const SignUp = () => {
     },
   });
 
+  /**
+   * Changing the page of form displayed in Browser
+   * Returning to previous one page
+   * Function is changing the page by changing the state of loadingControl by setLoadingControl
+   */
   const backFunction = () => {
     setPageControl(() => {
       if (pageControl === FIRST_FORM_PAGE) return FIRST_FORM_PAGE;
@@ -81,6 +98,11 @@ const SignUp = () => {
     });
   };
 
+  /**
+   * Changing the page of form displayed in Browser
+   * Going to next page
+   * Function is changing the page by changing the state of loadingControl by setLoadingControl
+   */
   const nextFunction = () => {
     setPageControl(() => {
       if (pageControl === LAST_FORM_PAGE) return LAST_FORM_PAGE;
@@ -88,6 +110,27 @@ const SignUp = () => {
       return page + 1;
     });
   };
+
+  /**
+   * Function showing to user that data is sending to the server
+   * FUNCTION IN THAT FORM FAKING SENDING DATA by using setTimeout()
+   *
+   * After setTimeout() passed function is triggering rendering the LAST_FORM_PAGE
+   */
+  const confirmation = () => {
+    setLoadingControl(true);
+    setTimeout(() => {
+      setPageControl(LAST_FORM_PAGE);
+      setLoadingControl(false);
+    }, 800);
+  };
+
+  /**
+   * Function returning to main page, in that case to FIRST_FORM_PAGE of form
+   * Function is changing the page by changing the state of loadingControl by setLoadingControl
+   *
+   * Function is cleaning previously provided by user and data stored in APP
+   */
 
   const returnToMain = () => {
     setPageControl(FIRST_FORM_PAGE);
@@ -106,14 +149,12 @@ const SignUp = () => {
     setSignForm(newState);
   };
 
-  //confirmation function faking sending data
-  const confirmation = () => {
-    setLoadingControl(true);
-    setTimeout(() => {
-      setPageControl(LAST_FORM_PAGE);
-      setLoadingControl(false);
-    }, 800);
-  };
+  /**
+   *Function is changing the value, touched and valid stored inside the signForm
+   function is using the helper function checkValidity(), which is evaluating upcoming input
+   * @param {Object} e [e - event object triggered by input provided by user]
+   * @param {String} formName [Is a name of the input's field in form, used to identify what should be updated]
+   */
 
   const inputChangeHandler = (e, formName) => {
     const updatedForm = {
@@ -128,6 +169,10 @@ const SignUp = () => {
     setSignForm(updatedForm);
   };
 
+  /**
+   * For Loop which is creating the array of the object containing the id and needed information
+   * in a process of rendering the form's pages within switch statement
+   */
   const formElementKeyArray = [];
   for (let key in signForm) {
     formElementKeyArray.push({
@@ -135,6 +180,10 @@ const SignUp = () => {
       config: signForm[key],
     });
   }
+
+  /**
+   *  Switch statement which base on pageControl value rendering different pages of the form
+   */
 
   let form = "";
   switch (pageControl) {
@@ -145,6 +194,7 @@ const SignUp = () => {
           form={formElementKeyArray.slice(...NAME_AND_PHONE_NUMBER_SLICE_INDEX)}
           formInputHandler={inputChangeHandler}
           next={nextFunction}
+          //!IMPORTANT uncoment it in production
           // buttonDisable={!(signForm.name.valid && signForm.number.valid)}
         />
       );
@@ -158,12 +208,12 @@ const SignUp = () => {
           formInputHandler={inputChangeHandler}
           back={backFunction}
           next={nextFunction}
+          //!IMPORTANT uncoment it in production
           // buttonDisable={!(signForm.email.valid && signForm.dateOfBirth.valid)}
         />
       );
       break;
     case THIRD_FORM_PAGE:
-      //here should be req
       form = (
         <ConfirmationFormPage
           loadingControl={loadingControl}
