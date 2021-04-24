@@ -1,32 +1,32 @@
 .title {
-    margin-top: 25px;
-    margin-bottom: 10px;
     font-size: 36px;
-    
+    margin-bottom: 10px;
+    margin-top: 25px;
 }
 
 .container {
-    width: 90%;
-    height: 72vh;
-    min-height: 480px;
-    max-height: 550px;
-    margin: 15vh auto ;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    padding-top: 2vh;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
     display: relative;
+    height: 72vh;
+    margin: 15vh auto ;
+    max-height: 550px;
+    min-height: 480px;
+    padding-top: 2vh;
+    text-align: center;
+    width: 90%;
 }
 
 .flexContainerGeneral {
-    display: flex;
-     justify-content: flex-end; 
     bottom: 0;
+    display: flex;
+    justify-content: flex-end; 
     margin-top: 2vh;
 }
 
 .flexContainerToRight {
-  justify-content: flex-end; 
-  padding-right: 5%;
+    justify-content: flex-end; 
+    padding-right: 5%;
 }
 
 .flexContainerCentered {
@@ -35,16 +35,17 @@
 }
 
 .buttonWrapper {
+    display: flex;
     padding: 0;
     margin: 0;
-    display: flex;
+
 }
 
-@media  (max-width: 480px) and (min-width: 320px) {
+/* @media  (max-width: 480px) and (min-width: 320px) {
     .container {
 
     }
-}
+} */
 
 @media (max-width: 700px) and (min-width: 481px){
     .container {
@@ -61,8 +62,9 @@
 @media (min-width: 1001px) {
     .container {
         /* background-color: lightblue; */
-        width: 50%;
         max-width: 750px;
+        width: 50%;
+
     }
     .flexContainerCentered {
         justify-content: space-evenly; 
