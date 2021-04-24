@@ -31,6 +31,13 @@ const signUpForm = (props) => {
               placeholder={item.config.placeholder}
               formInputHandler={(e) => props.formInputHandler(e, item.id)}
             />
+            {!item.config.valid &&
+              // props.shouldValidate &&
+              item.config.touched && (
+                <p className={classes.invalidInputMsg}>
+                  {item.config.invalidInputInfo}
+                </p>
+              )}
           </div>
         );
       })}

@@ -7,7 +7,7 @@
 .container {
     border-radius: 10px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
-    display: relative;
+    /* position: relative; */
     height: 72vh;
     justify-content: center;
     margin: 15vh auto;
@@ -21,6 +21,7 @@
 .inputContainer {
     margin: 2vh 0;
     padding: 4px 0 4px; 
+    position: relative;
 }
 
 .inputFieldName {
@@ -31,6 +32,15 @@
     padding-top: 10px;
     text-align: left;
     width: 90%;
+}
+
+.invalidInputMsg {
+    position: absolute;
+    margin-left: 5%;
+    bottom: -38px;
+    color: red;
+    font-style: italic;
+    text-align: left;
 }
 
 .flexContainerGeneral {
