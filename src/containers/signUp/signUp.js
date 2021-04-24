@@ -10,6 +10,8 @@ const FIRST_FORM_PAGE = 0;
 const SECOND_FORM_PAGE = 1;
 const THIRD_FORM_PAGE = 2;
 const LAST_FORM_PAGE = 3;
+const NAME_AND_PHONE_NUMBER_SLICE_INDEX = [0, 2];
+const EMAIL_AND_DATE_OF_BIRTH_SLICE_INDEX = [2, 4];
 
 const SignUp = () => {
   const [pageControl, setPageControl] = useState(0);
@@ -88,7 +90,7 @@ const SignUp = () => {
   };
 
   const returnToMain = () => {
-    setPageControl(0);
+    setPageControl(FIRST_FORM_PAGE);
     //TODO Clear values in state
     let newState = { ...signForm };
     for (let key of Object.keys(signForm)) {
@@ -109,7 +111,7 @@ const SignUp = () => {
   const confirmation = () => {
     setLoadingControl(true);
     setTimeout(() => {
-      setPageControl(3);
+      setPageControl(LAST_FORM_PAGE);
       setLoadingControl(false);
     }, 800);
   };
@@ -141,7 +143,7 @@ const SignUp = () => {
       form = (
         <SignUpForm
           readonly={false}
-          form={formElementKeyArray.slice(0, 2)}
+          form={formElementKeyArray.slice(...NAME_AND_PHONE_NUMBER_SLICE_INDEX)}
           formInputHandler={inputChangeHandler}
           next={nextFunction}
           // buttonDisable={!(signForm.name.valid && signForm.number.valid)}
@@ -151,7 +153,9 @@ const SignUp = () => {
     case SECOND_FORM_PAGE:
       form = (
         <SignUpForm
-          form={formElementKeyArray.slice(2, 4)}
+          form={formElementKeyArray.slice(
+            ...EMAIL_AND_DATE_OF_BIRTH_SLICE_INDEX
+          )}
           formInputHandler={inputChangeHandler}
           back={backFunction}
           next={nextFunction}
