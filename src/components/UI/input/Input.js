@@ -5,6 +5,10 @@ import classes from "./Input.module.css";
 const input = (props) => {
   const inputCSSClasses = [classes.inputClass];
 
+  /**
+   * If condition which are going to change the CSS classes
+   * CSS class Invalid is going to emphasise incorrect input
+   */
   if (props.invalid && props.shouldValidate && props.touched) {
     inputCSSClasses.push(classes.Invalid);
   }

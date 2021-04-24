@@ -7,6 +7,10 @@ import classes from "./SignUpForm.module.css";
 const signUpForm = (props) => {
   const flexClassStyleArr = [classes.flexContainerGeneral];
 
+  /**
+   * If condition which are going to change the CSS classes
+   * in relation to how many buttons need to be rendered, base on number of the passed event handlers
+   */
   if (props.next && props.back)
     flexClassStyleArr.push(classes.flexContainerCentered);
   if (props.next && !props.back)
