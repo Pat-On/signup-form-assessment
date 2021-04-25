@@ -244,7 +244,7 @@ const SignUp = () => {
       break;
   }
 
-  return <div className={classes.white}>{form}</div>;
+  return <div>{form}</div>;
 };
 
 export default SignUp;
