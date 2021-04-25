@@ -6,6 +6,7 @@ import classes from "./Button.module.css";
  * @param {String} props.assignedClass [Simple string which is giving to chance to assign custom CSS class]
  * @param {String} props.children [Are use to provide the description of button]
  * @param {Function} props.clicked [Function which is going to handle onClick event]
+ * @param {Boolean} props.buttonDisable [boolean value disabling button]
  */
 const button = (props) => {
   let button = (
@@ -17,10 +18,6 @@ const button = (props) => {
     </button>
   );
 
-  /**
-   * If statement which is going to re-sign the button with additional property: disabled
-   *  dependency: props.buttonDisable
-   */
   if (props.buttonDisable) {
     button = (
       <button

@@ -14,8 +14,7 @@ const input = (props) => {
   if (props.invalid && props.shouldValidate && props.touched) {
     inputCSSClasses.push(classes.Invalid);
   }
-
-  return (
+  const inputItem = (
     <input
       className={inputCSSClasses.join(" ")}
       placeholder={props.placeholder}
@@ -24,6 +23,8 @@ const input = (props) => {
       {...props.elementConfig}
     />
   );
+
+  return inputItem;
 };
 
 export default input;

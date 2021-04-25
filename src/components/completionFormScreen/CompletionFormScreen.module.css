@@ -25,7 +25,6 @@
     max-height: 550px;
     min-height: 480px;
     padding-top: 20px;
-    /* padding-top: 2vh; */
     text-align: center;
     width: 90%;
 }
@@ -53,13 +52,11 @@
 
 @media (max-width: 700px) and (min-width: 481px){
     .container {
-        /* background-color: lightcoral; */
         width: 70%;
     }
 }
 @media (max-width: 1000px) and (min-width: 701px){
     .container {
-        /* background-color: yellow; */
         width: 70%;
     }
 }
@@ -71,7 +68,6 @@
         width: 50%;
     }
     .container {
-        /* background-color: lightblue; */
         max-width: 750px;
         width: 50%;
     }
