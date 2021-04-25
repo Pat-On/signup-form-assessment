@@ -12,21 +12,17 @@ const unorderedList = (props) => {
   for (let key in props.formValues) {
     keyObjectArr.push(key);
   }
-  return (
-    <ul className={classes.NoneStyle}>
-      {keyObjectArr.map((key, index) => {
-        return (
-          <Fragment key={props.formValues[key].placeholder}>
-            <ListElement
-              bolded={true}
-              value={props.formValues[key].name + ":"}
-            />
-            <ListElement value={props.formValues[key].value} />
-          </Fragment>
-        );
-      })}
-    </ul>
-  );
+
+  const elementsOfList = keyObjectArr.map((key) => {
+    return (
+      <Fragment key={props.formValues[key].placeholder}>
+        <ListElement bolded={true} value={props.formValues[key].name + ":"} />
+        <ListElement value={props.formValues[key].value} />
+      </Fragment>
+    );
+  });
+
+  return <ul className={classes.NoneStyle}>{elementsOfList}</ul>;
 };
 
 export default unorderedList;

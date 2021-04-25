@@ -9,7 +9,7 @@ import classes from "./CompletionFormScreen.module.css";
  * @param {Function} props.back [function which should redirect user to pointed page. Function is attached to button to "onClick" event]
  */
 const confirmationFormPage = (props) => {
-  return (
+  const form = (
     <div className={classes.container}>
       <h1 className={classes.title}>Thank You For Your Submission</h1>
       <p className={classes.subTitle}>
@@ -31,6 +31,8 @@ const confirmationFormPage = (props) => {
       </div>
     </div>
   );
+
+  return form;
 };
 
 export default confirmationFormPage;

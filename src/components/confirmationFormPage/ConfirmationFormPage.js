@@ -38,14 +38,10 @@ const confirmationFormPage = (props) => {
       </Button>
     );
 
-  return (
+  const form = (
     <div className={classes.container}>
       <h1 className={classes.title}>Confirmation</h1>
-      <UnorderedList
-        key={"234424"}
-        formValues={props.formValues}
-        // formElementsKey={props.formElementsKey}
-      />
+      <UnorderedList formValues={props.formValues} />
 
       <div className={flexClassStyleArr.join(" ")}>
         {props.back && (
@@ -62,6 +58,8 @@ const confirmationFormPage = (props) => {
       </div>
     </div>
   );
+
+  return form;
 };
 
 export default confirmationFormPage;
