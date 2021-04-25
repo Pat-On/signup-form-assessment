@@ -206,7 +206,7 @@ const SignUp = () => {
           formInputHandler={inputChangeHandler}
           next={nextFunction}
           //!IMPORTANT uncomment it in production
-          // buttonDisable={!(signForm.name.valid && signForm.number.valid)}
+          buttonDisable={!(signForm.name.valid && signForm.number.valid)}
         />
       );
       break;
@@ -220,7 +220,7 @@ const SignUp = () => {
           back={backFunction}
           next={nextFunction}
           //!IMPORTANT uncomment it in production
-          // buttonDisable={!(signForm.email.valid && signForm.dateOfBirth.valid)}
+          buttonDisable={!(signForm.email.valid && signForm.dateOfBirth.valid)}
         />
       );
       break;
