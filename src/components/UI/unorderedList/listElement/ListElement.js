@@ -7,7 +7,7 @@ const listElement = (props) => {
 
   if (props.bolded) classList.push(classes.bolded);
 
-  return <li className={classList.join(" ")}>{props.value}</li>;
+  return <li className={classList.join(" ")}>{props.children}</li>;
 };
 
 export default listElement;

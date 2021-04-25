@@ -30,6 +30,6 @@ describe("<ConfirmationFormPage/>", () => {
   });
 
   it("should render one <Button> item when props.back is sent", () => {
-    expect(wrapper.find(ListElement)).toHaveLength(6);
+    expect(wrapper.find(ListElement)).toHaveLength(3);
   });
 });

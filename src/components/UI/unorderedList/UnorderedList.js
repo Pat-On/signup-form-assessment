@@ -13,12 +13,23 @@ const unorderedList = (props) => {
     keyObjectArr.push(key);
   }
 
-  const elementsOfList = keyObjectArr.map((key) => {
+  const elementsOfList = keyObjectArr.map((key, index) => {
     return (
-      <Fragment key={props.formValues[key].placeholder}>
-        <ListElement bolded={true} value={props.formValues[key].name + ":"} />
-        <ListElement value={props.formValues[key].value} />
-      </Fragment>
+      // <Fragment key={props.formValues[key].placeholder}>
+      <ListElement key={index}>
+        <p
+          key={props.formValues[key].name}
+          className={[classes.listElementsChildrens, classes.bolded].join(" ")}
+        >
+          {props.formValues[key].name + ":"}
+        </p>
+        <p
+          key={props.formValues[key].value}
+          className={classes.listElementsChildrens}
+        >
+          {props.formValues[key].value}
+        </p>
+      </ListElement>
     );
   });
 
