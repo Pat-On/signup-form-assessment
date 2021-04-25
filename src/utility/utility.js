@@ -2,6 +2,11 @@ import moment from "moment";
 
 const MINIMAL_REQUIRED_AGE = 18;
 
+/**
+ * @DescriptionFunction Component responsible for rendering the sign-up forms including the input fields
+ * @param {String} value [validated input]
+ * @param {Object} rules [Config object - containing all necessary data which Validity should take place ]
+ */
 export const checkValidity = (value, rules) => {
   let isValid = true;
   if (!rules) {
