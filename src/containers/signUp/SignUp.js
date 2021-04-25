@@ -169,7 +169,6 @@ const SignUp = () => {
    * @param {Object} e [e - event object triggered by input provided by user]
    * @param {String} formName [Is a name of the input's field in form, used to identify what should be updated]
    */
-
   const inputChangeHandler = (e, formName) => {
     const updatedForm = {
       ...signForm,
@@ -204,11 +203,11 @@ const SignUp = () => {
     case FIRST_FORM_PAGE:
       form = (
         <SignUpForm
-          readonly={false}
+          // readonly={false}
           form={formElementKeyArray.slice(...NAME_AND_PHONE_NUMBER_SLICE_INDEX)}
           formInputHandler={inputChangeHandler}
           next={nextFunction}
-          //!IMPORTANT uncoment it in production
+          //!IMPORTANT uncomment it in production
           // buttonDisable={!(signForm.name.valid && signForm.number.valid)}
         />
       );
@@ -222,7 +221,7 @@ const SignUp = () => {
           formInputHandler={inputChangeHandler}
           back={backFunction}
           next={nextFunction}
-          //!IMPORTANT uncoment it in production
+          //!IMPORTANT uncomment it in production
           // buttonDisable={!(signForm.email.valid && signForm.dateOfBirth.valid)}
         />
       );
