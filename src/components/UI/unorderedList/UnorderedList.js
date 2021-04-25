@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import ListElement from "./listElement/ListElement";
 
 import classes from "./UnorderedList.module.css";
@@ -15,7 +15,6 @@ const unorderedList = (props) => {
 
   const elementsOfList = keyObjectArr.map((key, index) => {
     return (
-      // <Fragment key={props.formValues[key].placeholder}>
       <ListElement key={index}>
         <p
           key={props.formValues[key].name}
