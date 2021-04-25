@@ -34,8 +34,8 @@ const SignUp = () => {
       invalidInputInfo: "Have to contains only letters",
       name: "Name",
       placeholder: "Name",
-      value: "Patryk", // FAKE DATA FOR DEV
-      // value: "",
+      // value: "Patryk", // FAKE DATA FOR DEV
+      value: "",
 
       validation: {
         required: true,
@@ -48,8 +48,8 @@ const SignUp = () => {
       invalidInputInfo: "UK phone number - 11 digits",
       name: "Phone Number",
       placeholder: "01234567890",
-      value: "01234567890", // FAKE DATA FOR DEV
-      // value: "",
+      // value: "01234567890", // FAKE DATA FOR DEV
+      value: "",
 
       validation: {
         required: true,
@@ -62,8 +62,8 @@ const SignUp = () => {
       invalidInputInfo: "Enter valid email address",
       name: "E-mail",
       placeholder: "example@email.com",
-      value: "patryk@net.com", // FAKE DATA FOR DEV
-      // value: "",
+      // value: "patryk@net.com", // FAKE DATA FOR DEV
+      value: "",
 
       validation: {
         required: true,
@@ -76,8 +76,8 @@ const SignUp = () => {
       invalidInputInfo: "You must be 18+. DD/MM/YYYY",
       name: "Date of birth",
       placeholder: "dd/mm/yyyy",
-      // value: "",
-      value: "01/01/1990", // FAKE DATA FOR DEV
+      value: "",
+      // value: "01/01/1990", // FAKE DATA FOR DEV
 
       validation: {
         required: true,
