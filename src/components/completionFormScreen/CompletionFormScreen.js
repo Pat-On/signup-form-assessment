@@ -3,6 +3,11 @@ import Button from "../UI/button/Button";
 
 import classes from "./CompletionFormScreen.module.css";
 
+/**
+ * @DescriptionFunction Component is responsible to render the confirmation page
+ * which is confirming to user that sign-up form has been sent
+ * @param {Function} props.back [function which should redirect user to pointed page. Function is attached to button to "onClick" event]
+ */
 const confirmationFormPage = (props) => {
   return (
     <div className={classes.container}>
