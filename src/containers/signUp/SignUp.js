@@ -92,9 +92,11 @@ const SignUp = () => {
   });
 
   /**
-   * Changing the page of form displayed in Browser
+   * @description Changing the page of form displayed in Browser
    * Returning to previous one page
    * Function is changing the page by changing the state of loadingControl by setLoadingControl
+   * @input no input
+   * @return nothing
    */
   const backFunction = () => {
     setPageControl(() => {
@@ -105,9 +107,11 @@ const SignUp = () => {
   };
 
   /**
-   * Changing the page of form displayed in Browser
+   * @description Changing the page of form displayed in Browser
    * Going to next page
    * Function is changing the page by changing the state of loadingControl by setLoadingControl
+   * @input no input
+   * @return nothing
    */
   const nextFunction = () => {
     setPageControl(() => {
@@ -118,10 +122,12 @@ const SignUp = () => {
   };
 
   /**
-   * Function showing to user that data is sending to the server
+   * @Description Function showing to user that data is sending to the server
    * FUNCTION IN THAT FORM FAKING SENDING DATA by using setTimeout()
    *
    * After setTimeout() passed function is triggering rendering the LAST_FORM_PAGE
+   * @input no input
+   * @return nothing
    */
   const confirmation = () => {
     setLoadingControl(true);
@@ -132,10 +138,12 @@ const SignUp = () => {
   };
 
   /**
-   * Function returning to main page, in that case to FIRST_FORM_PAGE of form
+   * @Description  Function returning to main page, in that case to FIRST_FORM_PAGE of form
    * Function is changing the page by changing the state of loadingControl by setLoadingControl
    *
    * Function is cleaning previously provided by user and data stored in APP
+   * @input no input
+   * @return nothing
    */
 
   const returnToMain = () => {
@@ -156,8 +164,8 @@ const SignUp = () => {
   };
 
   /**
-   *Function is changing the value, touched and valid stored inside the signForm
-   function is using the helper function checkValidity(), which is evaluating upcoming input
+   * @DescriptionFunction is changing the value, touched and valid stored inside the signForm
+   * function is using the helper function checkValidity(), which is evaluating upcoming input
    * @param {Object} e [e - event object triggered by input provided by user]
    * @param {String} formName [Is a name of the input's field in form, used to identify what should be updated]
    */
