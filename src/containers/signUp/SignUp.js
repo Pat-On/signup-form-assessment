@@ -233,7 +233,6 @@ const SignUp = () => {
           back={backFunction}
           next={confirmation}
           formValues={signForm}
-          // formElementsKey={formElementKeyArray}
         />
       );
       break;

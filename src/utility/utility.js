@@ -42,17 +42,8 @@ export const checkValidity = (value, rules) => {
   }
 
   if (rules.isEighteen) {
-    // console.log(rules);
-    // console.log(value);
-    // console.log("?");
-    // console.log(moment(value, "DD/MM/YYYY", true).isValid());
     if (moment(value, "DD/MM/YYYY", true).isValid()) {
-      // console.log(rules);
-      // const data = new Date(value);
       const birthday = moment(value, "DD/MM/YYYY");
-      // console.log(birthday);
-      //TODO Improvement BUGy solution
-      // console.log(moment().diff(birthday, "years", false));
       isValid =
         moment().diff(birthday, "years", false) >= MINIMAL_REQUIRED_AGE &&
         isValid;
