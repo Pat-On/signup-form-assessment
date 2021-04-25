@@ -19,8 +19,16 @@
 }
 
 .Button:hover {
-	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-	background-color:#f6f6f6;
+	/* background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6; */
+	background: #8ec100;
+	color: white;
+	border:1px solid #719430;
+	box-shadow:inset 0px 1px 0px 0px #719430;
+/* background: linear-gradient(225deg, hsla(69, 78%, 32%, 1) 50%, hsla(74, 67%, 61%, 0.9) 100%, hsla(58, 100%, 52%, 1) 100%);
+background: -moz-linear-gradient(225deg, hsla(69, 78%, 32%, 1) 50%, hsla(74, 67%, 61%, 0.9) 100%, hsla(58, 100%, 52%, 1) 100%);
+background: -webkit-linear-gradient(225deg, hsla(69, 78%, 32%, 1) 50%, hsla(74, 67%, 61%, 0.9) 100%, hsla(58, 100%, 52%, 1) 100%); */
+/* filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#7E9012", endColorstr="#BEDE59", GradientType=1 ); */
 }
 
 .Button:active {

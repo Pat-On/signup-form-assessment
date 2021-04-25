@@ -35,6 +35,7 @@ const confirmationFormPage = (props) => {
     <div className={classes.container}>
       <h1 className={classes.title}>Confirmation</h1>
       <UnorderedList
+        key={"234424"}
         formValues={props.formValues}
         formElementsKey={props.formElementsKey}
       />

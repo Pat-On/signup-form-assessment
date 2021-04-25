@@ -11,13 +11,13 @@ configure({ adapter: new Adapter() });
 const keyObjectArr = ["test1", "test2", "test3"];
 const formValues = [
   {
-    test1: { placeholder: 1, name: 1, value: 1 },
+    test1: { placeholder: 11, name: 1, value: 1 },
   },
   {
-    test2: { placeholder: 2, name: 2, value: 2 },
+    test2: { placeholder: 22, name: 2, value: 2 },
   },
   {
-    test3: { placeholder: 3, name: 3, value: 3 },
+    test3: { placeholder: 33, name: 3, value: 3 },
   },
 ];
 

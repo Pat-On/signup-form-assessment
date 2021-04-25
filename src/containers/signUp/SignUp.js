@@ -4,6 +4,8 @@ import SignUpForm from "../../components/signUpForm/SignUpForm";
 import ConfirmationFormPage from "../../components/confirmationFormPage/ConfirmationFormPage";
 import CompletionFormScreen from "../../components/completionFormScreen/CompletionFormScreen";
 
+import classes from "./SignUp.module.css";
+
 import { checkValidity } from "../../utility/utility";
 
 const FIRST_FORM_PAGE = 0;
@@ -34,8 +36,8 @@ const SignUp = () => {
       invalidInputInfo: "Have to contains only letters",
       name: "Name",
       placeholder: "Name",
-      value: "Patryk", // FAKE DATA FOR DEV
-      // value: "",
+      // value: "Patryk", // FAKE DATA FOR DEV
+      value: "",
 
       validation: {
         required: true,
@@ -48,8 +50,8 @@ const SignUp = () => {
       invalidInputInfo: "UK phone number - 11 digits",
       name: "Phone Number",
       placeholder: "01234567890",
-      value: "01234567890", // FAKE DATA FOR DEV
-      // value: "",
+      // value: "01234567890", // FAKE DATA FOR DEV
+      value: "",
 
       validation: {
         required: true,
@@ -62,8 +64,8 @@ const SignUp = () => {
       invalidInputInfo: "Enter valid email address",
       name: "E-mail",
       placeholder: "example@email.com",
-      value: "patryk@net.com", // FAKE DATA FOR DEV
-      // value: "",
+      // value: "patryk@net.com", // FAKE DATA FOR DEV
+      value: "",
 
       validation: {
         required: true,
@@ -76,8 +78,8 @@ const SignUp = () => {
       invalidInputInfo: "You must be 18+. DD/MM/YYYY",
       name: "Date of birth",
       placeholder: "dd/mm/yyyy",
-      // value: "",
-      value: "01/01/1990", // FAKE DATA FOR DEV
+      value: "",
+      // value: "01/01/1990", // FAKE DATA FOR DEV
 
       validation: {
         required: true,
@@ -199,7 +201,7 @@ const SignUp = () => {
           formInputHandler={inputChangeHandler}
           next={nextFunction}
           //!IMPORTANT uncoment it in production
-          // buttonDisable={!(signForm.name.valid && signForm.number.valid)}
+          buttonDisable={!(signForm.name.valid && signForm.number.valid)}
         />
       );
       break;
@@ -213,7 +215,7 @@ const SignUp = () => {
           back={backFunction}
           next={nextFunction}
           //!IMPORTANT uncoment it in production
-          // buttonDisable={!(signForm.email.valid && signForm.dateOfBirth.valid)}
+          buttonDisable={!(signForm.email.valid && signForm.dateOfBirth.valid)}
         />
       );
       break;
@@ -236,7 +238,7 @@ const SignUp = () => {
       break;
   }
 
-  return <div>{form}</div>;
+  return <div className={classes.white}>{form}</div>;
 };
 
 export default SignUp;
