@@ -4,7 +4,7 @@ import SignUpForm from "../../components/signUpForm/SignUpForm";
 import ConfirmationFormPage from "../../components/confirmationFormPage/ConfirmationFormPage";
 import CompletionFormScreen from "../../components/completionFormScreen/CompletionFormScreen";
 
-import classes from "./SignUp.module.css";
+// import classes from "./SignUp.module.css";
 
 import { checkValidity } from "../../utility/utility";
 
