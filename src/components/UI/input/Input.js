@@ -1,7 +1,9 @@
 import React from "react";
 import classes from "./Input.module.css";
 
-//TODO proper CSS and responsive
+/**
+ * @DescriptionFunction Simple Input component which has dynamic style to emphasise wrong input
+ */
 const input = (props) => {
   const inputCSSClasses = [classes.inputClass];
 
