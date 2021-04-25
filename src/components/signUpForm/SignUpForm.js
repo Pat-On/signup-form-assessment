@@ -4,6 +4,14 @@ import Button from "../UI/button/Button";
 
 import classes from "./SignUpForm.module.css";
 
+/**
+ * @DescriptionFunction Component responsible for rendering the sign-up forms including the input fields
+ * @param {Function} props.back [function which should return user to previous page. Function is attached to button to "onClick" event]
+ * @param {Function} props.next [function which should return user to next page. Function is attached to button to "onClick" event]
+ * @param {Function} props.formInputHandler [Reference to function which is responsible to change the value base on upcoming input]
+ * @param {Boolean} props.buttonDisable [Boolean value which is responsible for disabling the button]
+ * @param {Array of Object} props.form [Array of object containing the unique id and config file needed by Input component]
+ */
 const signUpForm = (props) => {
   const flexClassStyleArr = [classes.flexContainerGeneral];
 

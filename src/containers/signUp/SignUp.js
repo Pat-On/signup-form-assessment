@@ -36,8 +36,8 @@ const SignUp = () => {
       invalidInputInfo: "Have to contains only letters",
       name: "Name",
       placeholder: "Name",
-      // value: "Patryk", // FAKE DATA FOR DEV
-      value: "",
+      value: "Patryk", // FAKE DATA FOR DEV
+      // value: "",
 
       validation: {
         required: true,
@@ -50,8 +50,8 @@ const SignUp = () => {
       invalidInputInfo: "UK phone number - 11 digits",
       name: "Phone Number",
       placeholder: "01234567890",
-      // value: "01234567890", // FAKE DATA FOR DEV
-      value: "",
+      value: "01234567890", // FAKE DATA FOR DEV
+      // value: "",
 
       validation: {
         required: true,
@@ -64,8 +64,8 @@ const SignUp = () => {
       invalidInputInfo: "Enter valid email address",
       name: "E-mail",
       placeholder: "example@email.com",
-      // value: "patryk@net.com", // FAKE DATA FOR DEV
-      value: "",
+      value: "patryk@net.com", // FAKE DATA FOR DEV
+      // value: "",
 
       validation: {
         required: true,
@@ -78,8 +78,8 @@ const SignUp = () => {
       invalidInputInfo: "You must be 18+. DD/MM/YYYY",
       name: "Date of birth",
       placeholder: "dd/mm/yyyy",
-      value: "",
-      // value: "01/01/1990", // FAKE DATA FOR DEV
+      // value: "",
+      value: "01/01/1990", // FAKE DATA FOR DEV
 
       validation: {
         required: true,
@@ -92,9 +92,11 @@ const SignUp = () => {
   });
 
   /**
-   * Changing the page of form displayed in Browser
+   * @description Changing the page of form displayed in Browser
    * Returning to previous one page
    * Function is changing the page by changing the state of loadingControl by setLoadingControl
+   * @input no input
+   * @return nothing
    */
   const backFunction = () => {
     setPageControl(() => {
@@ -105,9 +107,11 @@ const SignUp = () => {
   };
 
   /**
-   * Changing the page of form displayed in Browser
+   * @description Changing the page of form displayed in Browser
    * Going to next page
    * Function is changing the page by changing the state of loadingControl by setLoadingControl
+   * @input no input
+   * @return nothing
    */
   const nextFunction = () => {
     setPageControl(() => {
@@ -118,10 +122,12 @@ const SignUp = () => {
   };
 
   /**
-   * Function showing to user that data is sending to the server
+   * @Description Function showing to user that data is sending to the server
    * FUNCTION IN THAT FORM FAKING SENDING DATA by using setTimeout()
    *
    * After setTimeout() passed function is triggering rendering the LAST_FORM_PAGE
+   * @input no input
+   * @return nothing
    */
   const confirmation = () => {
     setLoadingControl(true);
@@ -132,10 +138,12 @@ const SignUp = () => {
   };
 
   /**
-   * Function returning to main page, in that case to FIRST_FORM_PAGE of form
+   * @Description  Function returning to main page, in that case to FIRST_FORM_PAGE of form
    * Function is changing the page by changing the state of loadingControl by setLoadingControl
    *
    * Function is cleaning previously provided by user and data stored in APP
+   * @input no input
+   * @return nothing
    */
 
   const returnToMain = () => {
@@ -156,12 +164,11 @@ const SignUp = () => {
   };
 
   /**
-   *Function is changing the value, touched and valid stored inside the signForm
-   function is using the helper function checkValidity(), which is evaluating upcoming input
+   * @DescriptionFunction is changing the value, touched and valid stored inside the signForm
+   * function is using the helper function checkValidity(), which is evaluating upcoming input
    * @param {Object} e [e - event object triggered by input provided by user]
    * @param {String} formName [Is a name of the input's field in form, used to identify what should be updated]
    */
-
   const inputChangeHandler = (e, formName) => {
     const updatedForm = {
       ...signForm,
@@ -196,11 +203,11 @@ const SignUp = () => {
     case FIRST_FORM_PAGE:
       form = (
         <SignUpForm
-          readonly={false}
+          // readonly={false}
           form={formElementKeyArray.slice(...NAME_AND_PHONE_NUMBER_SLICE_INDEX)}
           formInputHandler={inputChangeHandler}
           next={nextFunction}
-          //!IMPORTANT uncoment it in production
+          //!IMPORTANT uncomment it in production
           // buttonDisable={!(signForm.name.valid && signForm.number.valid)}
         />
       );
@@ -214,7 +221,7 @@ const SignUp = () => {
           formInputHandler={inputChangeHandler}
           back={backFunction}
           next={nextFunction}
-          //!IMPORTANT uncoment it in production
+          //!IMPORTANT uncomment it in production
           // buttonDisable={!(signForm.email.valid && signForm.dateOfBirth.valid)}
         />
       );
@@ -226,7 +233,7 @@ const SignUp = () => {
           back={backFunction}
           next={confirmation}
           formValues={signForm}
-          formElementsKey={formElementKeyArray}
+          // formElementsKey={formElementKeyArray}
         />
       );
       break;
