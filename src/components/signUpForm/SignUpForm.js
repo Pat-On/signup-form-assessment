@@ -24,11 +24,12 @@ const signUpForm = (props) => {
   if (props.next && !props.back)
     flexClassStyleArr.push(classes.flexContainerToRight);
 
-  const inputForms = props.form.map((item) => {
+  const inputForms = props.form.map((item, index) => {
     return (
       <div className={classes.inputContainer} key={item.id}>
         <p className={classes.inputFieldName}>{item.config.name}</p>
         <Input
+          id={"input" + index}
           invalid={!item.config.valid}
           shouldValidate={item.config.validation}
           touched={item.config.touched}
