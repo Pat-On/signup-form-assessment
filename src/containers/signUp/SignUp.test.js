@@ -1,8 +1,6 @@
 import React from "react";
 
-// import puppeteer from "jest-puppeteer";
-
-import { configure, shallow, mount } from "enzyme";
+import { configure, mount } from "enzyme";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 
 import SignUp from "./SignUp";

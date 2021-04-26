@@ -15,8 +15,7 @@ const formElementKeyArrayOne = [
     config: {
       name: "Name",
       placeholder: "Name",
-      value: "Patryk", // FAKE DATA FOR DEV
-      // value: "",
+      value: "Patryk",
 
       validation: {
         required: true,
@@ -34,8 +33,7 @@ const formElementKeyArrayTwo = [
     config: {
       name: "Name",
       placeholder: "Name",
-      value: "Patryk", // FAKE DATA FOR DEV
-      // value: "",
+      value: "Patryk",
 
       validation: {
         required: true,
@@ -50,8 +48,7 @@ const formElementKeyArrayTwo = [
     config: {
       name: "Phone Number",
       placeholder: "01234567890",
-      value: "01234567890", // FAKE DATA FOR DEV
-      // value: "",
+      value: "01234567890",
 
       validation: {
         required: true,
@@ -84,7 +81,6 @@ describe("<ConfirmationFormPage/>", () => {
 
   it("should render two <Input> item when there is two item in sent form array", () => {
     wrapper = shallow(<SignUpForm form={formElementKeyArrayTwo} />);
-    // console.log([...formElementKeyArray, additionalObject]);
     expect(wrapper.find(Input)).toHaveLength(2);
   });
 });

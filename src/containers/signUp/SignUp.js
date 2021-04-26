@@ -34,7 +34,6 @@ const SignUp = () => {
       invalidInputInfo: "Have to contains only letters",
       name: "Name",
       placeholder: "Name",
-      // value: "Patryk", // FAKE DATA FOR DEV
       value: "",
 
       validation: {
@@ -48,7 +47,6 @@ const SignUp = () => {
       invalidInputInfo: "UK phone number - 11 digits",
       name: "Phone Number",
       placeholder: "01234567890",
-      // value: "01234567890", // FAKE DATA FOR DEV
       value: "",
 
       validation: {
@@ -62,7 +60,6 @@ const SignUp = () => {
       invalidInputInfo: "Enter valid email address",
       name: "E-mail",
       placeholder: "example@email.com",
-      // value: "patryk@net.com", // FAKE DATA FOR DEV
       value: "",
 
       validation: {
@@ -77,7 +74,6 @@ const SignUp = () => {
       name: "Date of birth",
       placeholder: "dd/mm/yyyy",
       value: "",
-      // value: "01/01/1990", // FAKE DATA FOR DEV
 
       validation: {
         required: true,
@@ -139,7 +135,7 @@ const SignUp = () => {
    * @Description  Function returning to main page, in that case to FIRST_FORM_PAGE of form
    * Function is changing the page by changing the state of loadingControl by setLoadingControl
    *
-   * Function is cleaning previously provided by user and data stored in APP
+   * Function is cleaning previously provided by user data stored in APP
    * @input no input
    * @return nothing
    */
@@ -192,21 +188,18 @@ const SignUp = () => {
     });
   }
 
+  let form = "";
   /**
    *  Switch statement which base on pageControl value rendering different pages of the form
    */
-
-  let form = "";
   switch (pageControl) {
     case FIRST_FORM_PAGE:
       form = (
         <SignUpForm
-          // readonly={false}
           form={formElementKeyArray.slice(...NAME_AND_PHONE_NUMBER_SLICE_INDEX)}
           formInputHandler={inputChangeHandler}
           next={nextFunction}
-          //!IMPORTANT uncomment it in production
-          // buttonDisable={!(signForm.name.valid && signForm.number.valid)}
+          buttonDisable={!(signForm.name.valid && signForm.number.valid)}
         />
       );
       break;
@@ -219,8 +212,7 @@ const SignUp = () => {
           formInputHandler={inputChangeHandler}
           back={backFunction}
           next={nextFunction}
-          //!IMPORTANT uncomment it in production
-          // buttonDisable={!(signForm.email.valid && signForm.dateOfBirth.valid)}
+          buttonDisable={!(signForm.email.valid && signForm.dateOfBirth.valid)}
         />
       );
       break;

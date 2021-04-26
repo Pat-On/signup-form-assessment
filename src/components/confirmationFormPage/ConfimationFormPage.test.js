@@ -32,8 +32,4 @@ describe("<ConfirmationFormPage/>", () => {
   it("should render zero <Button> item when props.back or props.next are not sent", () => {
     expect(wrapper.find(Button)).toHaveLength(0);
   });
-
-  it("should render zero <Button> item when props.back or props.next are not sent", () => {
-    expect(wrapper.find(Button)).toHaveLength(0);
-  });
 });

@@ -1,13 +1,15 @@
 import React from "react";
+
 import UnorderedList from "../UI/unorderedList/UnorderedList";
 import Button from "../UI/button/Button";
+
 import classes from "./ConfirmationFormPage.module.css";
 
 /**
  * @DescriptionFunction Component is responsible to render the confirmation page
  * where user can check one more time provided data
- * @param {Function} props.back [function which should redirect user to pointed page. Function is attached to button to "onClick" event]
- * @param {Function} props.next [function which should return user to previous page. Function is attached to button to "onClick" event]
+ * @param {Function} props.back [function which should return user to previous page. Function is attached to button to "onClick" event]
+ * @param {Function} props.next [function which should redirect user to pointed page. Function is attached to button to "onClick" event]
  * @param {Object} props.formValues ["Config Object" Providing necessary data to display the fields and provided data by user]
  */
 const confirmationFormPage = (props) => {
